@@ -24,6 +24,27 @@
 
     
     <entry>
+      <title><![CDATA[Mac使用Dryrun做到不用运行Android Studio即可在模拟器安装预览GitHub开源项目]]></title>
+      <url>%2F2016%2F12%2F06%2Fmac%E4%BD%BF%E7%94%A8Dryrun%E5%81%9A%E5%88%B0%E4%B8%8D%E7%94%A8%E8%BF%90%E8%A1%8CAndroid-Studio%E5%8D%B3%E5%8F%AF%E5%9C%A8%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85%E9%A2%84%E8%A7%88GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%2F</url>
+      <content type="text"><![CDATA[Dryrun是GitHub上的一个开源工具，它最强大的地方在于可以只用一行命令行即可让你运行GitHub上的项目，是不是很激动？ 通常我们需要预览GitHub上的开源项目一般会做以下几步： 找到这个项目 点击项目右侧的 Clone or download下载整个项目资源 解压缩下载下来的zip文件 导入Android Studio 同步gradle配置 如果缺少配置文件或者项目报错，则需要先排错 运行项目并预览 如果正巧是自己希望的效果，留下，如果不是，删除。 然而Dryrun只需要一行命令即可，剩下的我们都不用操心，只需安静等待即可。。。。 下面来说说如何在mac上配置吧。 首先安装前需要配置ANDROID_HOME环境变量，方法如下： 启动Terminal终端工具 输入cd ~/ 进入当前用户的home目录 或cd /Users/YourUserName 如果不存在则创建： touch .bash_profile 如果存在,就打开并编辑：open .bash_profile 在里面添加sdk的tools和platform-tools的路径,注意每个路径要用 : 隔开,并且这个路径换成你自己的刚才解压后的sdk的实际路径. export PATH=$PATH:/Users/youname/android/soft/adt-bundle-mac-x86_64-20130522/sdk/platform-tools:/Users/youname/android/soft/adt-bundle-mac-x86_64-20130522/sdk/tools(具体的文件名你自己对应) 保存关闭 更新： source .bash_profile ok了,在Terminal终端工具里输入adb -version看看,是否出来类似的界面: Android Debug Bridge version 1.0.31 如果出来了,说明已经成功了. 然后安装Dryrun，使用如下命令 $ sudo gem install dryrun 顺利的话应该就安装成功了，如果报错一般会有类似ERROR: Failed to build gem native extension. 这种错误，经过各种查资料折腾，基本上确定这个错误的一般是ruby的相关依赖文件未安装完全（网上查的，如有错误还望指正）。一般情况安装xcode后貌似就能解决，如果还是不行请自行Google或百度。安装完成后便可使用，使用方法为dryrun + 项目地址，如：dryrun https://github.com/cesarferreira/android-helloworld，接下来就是见证奇迹的时候了（图是借用dryrun官方的效果图）。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Sublime Text中的属性设置]]></title>
+      <url>%2F2016%2F10%2F28%2FSublime-Text%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE%2F</url>
+      <content type="text"><![CDATA[12345678&#123; "font_face": "Courier New", "font_size": 14.0, "update_check": false, "open_files_in_new_window": false, "hot_exit": false, "remember_open_files": false &#125; 这些配置是需要放在Preference--&gt;settings-User下的，其中 font_face 是设置字体类型的，font_size 是设置字体大小的，update_check 表示是否开启检查更新， open_files_in_new_window表示是否在新窗口中打开文件，remember_open_files 表示是否记住上次打开的文件。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[关于toolbar菜单设置了always后不显示的问题]]></title>
+      <url>%2F2016%2F10%2F27%2F%E5%85%B3%E4%BA%8Etoolbar%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E4%BA%86always%E5%90%8E%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"><![CDATA[我们一般写menu文件时会有如下写法： 1234567&lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;menu xmlns:android="http://schemas.android.com/apk/res/android"&gt; &lt;item android:id="@+id/menu011" android:title="hehe" android:icon="@mipmap/ic_launcher" android:showAsAction="always"/&gt; &lt;/menu&gt; 这样写出来的menu是不会再toolbar上面显示的，跟设置的never一样都在隐藏菜单里。解决这个问题的办法其实很简单，如下： 12345678&lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"&gt; &lt;item android:id="@+id/menu_home" android:icon="@mipmap/home" app:showAsAction="always" android:title="@string/menu_home"/&gt; &lt;/menu&gt; 新增一句 1xmlns:app="http://schemas.android.com/apk/res-auto" 将 1android:showAsAction="always" 改成 1app:showAsAction="always" 即可解决。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[友盟统计sdk集成及多渠道打包]]></title>
       <url>%2F2016%2F10%2F13%2F%E5%8F%8B%E7%9B%9F%E7%BB%9F%E8%AE%A1sdk%E9%9B%86%E6%88%90%E5%8F%8A%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%2F</url>
       <content type="text"><![CDATA[友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。 然后根据友盟的sdk集成文档在AndroidStudio的app目录下的build.gradle添加如下代码，集成友盟统计sdk： 12// 友盟统计的sdk compile 'com.umeng.analytics:analytics:latest.integration' 然后在AndroidManifest.xml的Application标签下配置 1234567&lt;!-- 友盟appid --&gt; &lt;meta-data android:name="UMENG_APPKEY" android:value="XXX"&gt; &lt;/meta-data&gt; &lt;!--此处配置是为了方便酷传多渠道打包 --&gt; &lt;meta-data android:value="" android:name="UMENG_CHANNEL"/&gt; 其中XXX为你自己的Appkey，UMENG_CHANNEL的值为空字符串主要是为了使用酷传的多渠道打包。然后找到程序的入口Activity，即AndroidManifest.xml里配置了如下代码的Activity 1234567&lt;activity android:name=".MainActivity"&gt; &lt;intent-filter&gt; &lt;action android:name="android.intent.action.MAIN"/&gt; &lt;category android:name="android.intent.category.LAUNCHER"/&gt; &lt;/intent-filter&gt; &lt;/activity&gt; 在该Activity的onResum()跟onPause()方法里添加如下代码 1234567891011@Override protected void onResume() &#123; super.onResume(); MobclickAgent.onResume(this); &#125; @Override protected void onPause() &#123; super.onPause(); MobclickAgent.onPause(this); &#125; 至此，友盟统计的基本功能已经集成完毕。然后就是使用酷传进行多渠道打包了，先在酷传官网下载酷传的软件，然后申请账号，打开软件并登录 选择 上方的 工具箱 ，打开如下界面 选择 生成多渠道包，然后选择需要多渠道打包的apk文件 点击下一步，在弹出的渠道包签名对话框中选择相应的release版的keystore文件，并填写相应的信息 然后点击生成渠道包，就会出现生成渠道包的界面，完成后会在原始的apk文件所在的目录生成一个叫做 酷传智能分包 的文件夹，里面就是生成的多渠道包。]]></content>
