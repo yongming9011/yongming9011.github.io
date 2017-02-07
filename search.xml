@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[博客使用方法]]></title>
+      <url>%2F2017%2F02%2F07%2F%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[新建博客 hexo new "博客名"```1234比如：``` $ hexo new &quot;博客使用方法&quot; 为博客添加标签以及分类 打开/hexo/source/_posts文件夹，找到刚才新建的博客并打开 修改开头内容 title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧 其中：tags即为文章的标签，可以不写，如果要添加多个标签则使用如下格式： tags:[博客,使用,方法] 每个标签后的逗号必须是英文逗号。 categories即为文章的分类 如果需要手动实现阅读全文功能，则在需要显示阅读全文按钮的地方添加12345678* 如果需要自动设置显示阅读全文功能，在&lt;font color=#0099ff size=23&gt;主题文件&lt;/font&gt;下的_config.yml里面新增如下代码： ```yaml # 配置文章字数多于100字后显示阅读全文 auto_excerpt: enable: true length: 100 发布博客使用如下命令即可： $ hexo clean 该命令用于清除缓存，可以忽略 $ hexo generate 该命令用户生成静态页面，可以简写为 $ hexo g 如果需要现在本地预览则使用$ hexo server或者可以简写为$ hexo s，然后运行 localhost:4000即可预览。 $ hexo deploy 该命令将本地文件部署到github上，可以简写为$ hexo d​]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[博客搬家]]></title>
       <url>%2F2017%2F01%2F20%2F%E5%8D%9A%E5%AE%A2%E6%90%AC%E5%AE%B6%2F</url>
       <content type="text"><![CDATA[​ 原来一直在CSDN上写博客，不知道是自己不会用还是怎么的，老感觉CSDN的排版很麻烦而且很不人性化。后来被简书的简介唯美风格所吸引，曾经一度想转移到简书，但是感觉简书上太杂乱，什么内容的文章都有，最近才听说有个叫GitHub Pages的神器，于是乎果断尝试，简直是相见恨晚啊。所以，以后的个人博客都将迁移到此处。 ​ 注：原CSDN博客地址：http://blog.csdn.net/zhangym90]]></content>
