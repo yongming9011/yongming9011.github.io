@@ -85,28 +85,28 @@
 
 
 <meta name="description" content="友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。
-然后根据友盟的sdk集成文档在AndroidStudio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
+然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
 12// 友盟统计的sdk  compile &apos;com.umeng.analytics:analytics:latest.integration&apos;
-然后在AndroidManifest.">
+然后在AndroidManifest">
 <meta property="og:type" content="article">
 <meta property="og:title" content="友盟统计sdk集成及多渠道打包">
 <meta property="og:url" content="https://yongming9011.github.io/2016/10/13/友盟统计sdk集成及多渠道打包/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
 <meta property="og:description" content="友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。
-然后根据友盟的sdk集成文档在AndroidStudio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
+然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
 12// 友盟统计的sdk  compile &apos;com.umeng.analytics:analytics:latest.integration&apos;
-然后在AndroidManifest.">
+然后在AndroidManifest">
 <meta property="og:image" content="http://img.blog.csdn.net/20161215103830603?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20161215104534551?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20161215105845704?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20161215110025867?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-02-07T10:16:50.000Z">
+<meta property="og:updated_time" content="2017-02-07T10:30:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="友盟统计sdk集成及多渠道打包">
 <meta name="twitter:description" content="友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。
-然后根据友盟的sdk集成文档在AndroidStudio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
+然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
 12// 友盟统计的sdk  compile &apos;com.umeng.analytics:analytics:latest.integration&apos;
-然后在AndroidManifest.">
+然后在AndroidManifest">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20161215103830603?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
@@ -410,7 +410,7 @@
 
       
         <p>友盟统计sdk集成其实很简单，先去<a href="http://mobile.umeng.com/apps" target="_blank" rel="external">友盟官网</a>新建应用，然后会得到一个Appkey。</p>
-<p>然后根据友盟的<a href="http://dev.umeng.com/analytics/android-doc/integration" target="_blank" rel="external">sdk集成文档</a>在AndroidStudio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：</p>
+<p>然后根据友盟的<a href="http://dev.umeng.com/analytics/android-doc/integration" target="_blank" rel="external">sdk集成文档</a>在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 友盟统计的sdk  </span></div><div class="line">compile <span class="string">'com.umeng.analytics:analytics:latest.integration'</span></div></pre></td></tr></table></figure>
 <p>然后在AndroidManifest.xml的Application标签下配置</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 友盟appid --&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">meta-data</span>  </span></div><div class="line">            <span class="attr">android:name</span>=<span class="string">"UMENG_APPKEY"</span>  </div><div class="line">            <span class="attr">android:value</span>=<span class="string">"XXX"</span>&gt;  </div><div class="line">        <span class="tag">&lt;/<span class="name">meta-data</span>&gt;</span>  </div><div class="line">         <span class="comment">&lt;!--此处配置是为了方便酷传多渠道打包 --&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:value</span>=<span class="string">""</span> <span class="attr">android:name</span>=<span class="string">"UMENG_CHANNEL"</span>/&gt;</span></div></pre></td></tr></table></figure>
