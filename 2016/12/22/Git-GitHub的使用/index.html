@@ -150,7 +150,7 @@
 <meta property="og:image" content="https://ww1.sinaimg.cn/large/006y8lValy1fciubbtua6j30bj020aa5.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006y8lValy1fciua4e96dj30bj03raal.jpg">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006y8lValy1fciubn5irwj30bj01u0sw.jpg">
-<meta property="og:updated_time" content="2017-02-08T02:52:12.000Z">
+<meta property="og:updated_time" content="2017-02-08T03:00:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git&GitHub的使用">
 <meta name="twitter:description" content="一、     前言1.     简介Git是Linux作者Linus Torvalds开发的一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
@@ -506,14 +506,12 @@
 <p><img src="https://ww3.sinaimg.cn/large/006y8lValy1fciua2vroaj30b1061q31.jpg" alt="img"></p>
 <p>每一次操作相当于把HEAD移动过来移动过去，所以速度特别快。而SVN等其他的则是相当于修改文件，所以效率上比git要差。</p>
 <h2 id="3-管理修改"><a href="#3-管理修改" class="headerlink" title="3.     管理修改"></a>3.     管理修改</h2><ol>
-<li><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，使用<code>git checkout -- &lt;file&gt;</code>命令</p>
-<p>命令<code>git checkout — readme.md</code>意思就是，把readme.md文件在工作区的修改全部撤销，这里有两种情况：</p>
+<li><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，使用<code>git checkout -- &lt;file&gt;</code>命令，命令<code>git checkout — readme.md</code>意思就是，把readme.md文件在工作区的修改全部撤销，这里有两种情况：</p>
 <ul>
 <li>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</li>
 <li>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</li>
 </ul>
-<p>总之，就是让这个文件回到最近一次git commit或git add时的状态。<code>git checkout -- file</code>命令中的<strong>–</strong>很重要，没有<strong>–</strong>，就变成了“切换到另一个分支”的命令。</p>
-<p>当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
+<p>总之，就是让这个文件回到最近一次git commit或git add时的状态。<code>git checkout -- file</code>命令中的<strong>–</strong>很重要，没有<strong>–</strong>，就变成了“切换到另一个分支”的命令。当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
 </li>
 <li><p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时（执行了add命令），想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>可以把暂存区的修改撤销掉，重新放回工作区，这样就回到了场景1，第二步按场景1操作。git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。</p>
 </li>
@@ -584,12 +582,14 @@
 <p><img src="https://ww4.sinaimg.cn/large/006y8lValy1fciua8lc65j30bj029aac.jpg" alt="img"></p>
 <p>总结：</p>
 <p>Git鼓励大量使用分支：</p>
-<p>查看分支：<code>git branch</code></p>
-<p>创建分支：<code>git branch &lt;name&gt;</code></p>
-<p>切换分支：<code>git checkout &lt;name&gt;</code></p>
-<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code></p>
-<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
-<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+<ul>
+<li>查看分支：<code>git branch</code></li>
+<li>创建分支：<code>git branch &lt;name&gt;</code></li>
+<li>切换分支：<code>git checkout &lt;name&gt;</code></li>
+<li>创建+切换分支：<code>git checkout -b &lt;name&gt;</code></li>
+<li>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></li>
+<li>删除分支：<code>git branch -d &lt;name&gt;</code></li>
+</ul>
 <h3 id="2-解决冲突"><a href="#2-解决冲突" class="headerlink" title="2)      解决冲突"></a>2)      解决冲突</h3><p>做个实验，我们先在创建个dev分支，然后切换回master分支，修改mm.txt文档，然后commit提交。然后再切换到dev分支，修改mm.txt，完成之后commit。</p>
 <p><img src="https://ww4.sinaimg.cn/large/006y8lValy1fciubeo2kdj309d03q0so.jpg" alt="img"></p>
 <p>这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突。</p>
@@ -628,8 +628,10 @@
 <p><img src="https://ww1.sinaimg.cn/large/006y8lValy1fciucb0i25j30bj073gmr.jpg" alt="img"></p>
 <p>可以看出Git友情提醒，feature分支还没有被合并，如果删除，将丢失掉修改，如果要强行删除，需要使用命令<code>git branch -D feature</code>。</p>
 <p>总结：</p>
-<p>开发一个新feature，最好新建一个分支；</p>
-<p>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除。</p>
+<ul>
+<li>开发一个新feature，最好新建一个分支；</li>
+<li>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除。</li>
+</ul>
 <h3 id="6-多人协作"><a href="#6-多人协作" class="headerlink" title="6)      多人协作"></a>6)      多人协作</h3><p>当从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了，并且，远程仓库的默认名称是origin。要查看远程库的信息，用<code>git remote</code> 或者，用<code>git remote -v</code>显示更详细的信息.</p>
 <p><img src="https://ww2.sinaimg.cn/large/006y8lValy1fciubaf0nwj30bj01q74h.jpg" alt="img"></p>
 <p>上面显示了可以抓取和推送的origin的地址。如果没有推送权限，就看不到push的地址。</p>
