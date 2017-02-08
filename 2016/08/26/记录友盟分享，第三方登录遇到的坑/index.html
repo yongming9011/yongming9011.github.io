@@ -84,25 +84,25 @@
 
 
 
-<meta name="description" content="最近公司项目上需要用到分享跟第三方登录，由于友盟集成的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。
+<meta name="description" content="最近公司项目上需要用到分享跟第三方登录，由于友盟的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。
 
 坑1：QQ第三方登录的坑
-QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样">
+QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样的，如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记录友盟分享，第三方登录遇到的坑">
 <meta property="og:url" content="https://yongming9011.github.io/2016/08/26/记录友盟分享，第三方登录遇到的坑/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
-<meta property="og:description" content="最近公司项目上需要用到分享跟第三方登录，由于友盟集成的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。
+<meta property="og:description" content="最近公司项目上需要用到分享跟第三方登录，由于友盟的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。
 
 坑1：QQ第三方登录的坑
-QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样">
-<meta property="og:updated_time" content="2017-02-07T13:54:26.000Z">
+QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样的，如">
+<meta property="og:updated_time" content="2017-02-08T07:11:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记录友盟分享，第三方登录遇到的坑">
-<meta name="twitter:description" content="最近公司项目上需要用到分享跟第三方登录，由于友盟集成的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。
+<meta name="twitter:description" content="最近公司项目上需要用到分享跟第三方登录，由于友盟的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。
 
 坑1：QQ第三方登录的坑
-QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样">
+QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样的，如">
 
 
 
@@ -404,7 +404,7 @@ QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然
       
 
       
-        <p>最近公司项目上需要用到分享跟第三方登录，由于友盟集成的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。</p>
+        <p>最近公司项目上需要用到分享跟第三方登录，由于友盟的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。</p>
 <ul>
 <li><p><strong>坑1：QQ第三方登录的坑</strong></p>
 <p>QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样的，如果你给腾讯那边上传的是一个debug版的apk，那么这个AppID及Appkey就是debug版的，然后你的第三方登录只有在使用dubug版的时候才能用，在正式包下会提示错误：应用不是最新的（100044）这个错误，所以这一点一定要注意，如果你给腾讯上传的是一个release版的apk，那么你以后的每次调试QQ登录都得用release的签名打包，我的做法是，调试的时候直接用release版的签名编译，具体参考：<a href="http://m.blog.csdn.net/article/details?id=51181993" target="_blank" rel="external">这篇文章</a>的做法 。</p>
