@@ -72,6 +72,62 @@
     </entry>
 
     
+    <entry>
+      <title><![CDATA[Java中回调的理解]]></title>
+      <url>%2F2016%2F12%2F12%2FJava%E4%B8%AD%E5%9B%9E%E8%B0%83%E7%9A%84%E7%90%86%E8%A7%A3%2F</url>
+      <content type="text"><![CDATA[回调在Java中运用的相当广泛，类似Android中的控件点击监听事件setOnClickListener()方法就是典型的回调。回调是什么？关于回调的定义通俗地说就是：A类调用B类中的某个方法，然后B类中反过来调用A类中的方法D,D这个方法就叫做回调方法。在Java中回调的这个方法D一般是接口中定义，然后A类通过实现接口的D方法。 一般回调的话需要满足以下几个条件： Class A实现接口CallBack callback ——场景1 class A中包含一个class B的引用b ——场景2 class B有一个参数为callback的方法f(CallBack callback) ——场景3 A里的B的引用调用B的方法 f(CallBack callback) ——A类调用B类的某个方法C ——场景4 然后b就可以在f(CallBack callback)方法中调用A的方法 ——B类调用A类的某个方法D ——场景5 接下来我将通过一个demo说明，假设我需要实现一个类似下载完成的监听方法。具体就是Download这个类可以实现下载，给它的构造方法中传入我们需要下载的数据量，其开始下载，并且提供了下载完成的监听，当下载成功或者失败后调用对应的回调方法。 首先，定义一个下载完成的接口，接口中包含了下载完成后的两个回调方法。 123456789101112131415/** * 下载完成的回调接口 * Created by zhangyongming on 2016/12/12. */ public interface OnDownloadCompleted &#123; /** * 下载成功的回调 */ void onSuccess(); /** * 下载失败的回调 */ void onFail(); &#125; 然后是Download类：Download类有一个setOnDownloadCompletedListener(OnDownloadCompleted onDownloadCompleted)方法（相当于场景3），在该方法中模拟了下载过程，并且根据下载的结果调用了Test类的onSucess()跟onFail()方法（相当于场景5，这两个方法是Test类实现了OnDownloadCompleted接口后实现的方法），在这里我们模拟如果下载结果为100则为下载成功，否则下载失败。 123456789101112131415161718192021222324252627282930/** * 模拟下载的类，里面有一个设置下载完成的监听 * Created by zhangyongming on 2016/12/12. */ public class Download &#123; private int progress; public Download(int progress) &#123; this.progress = progress; &#125; // class B有一个参数为callback的方法f(CallBack callback) ——场景3 public void setOnDownloadCompletedListener(OnDownloadCompleted onDownloadCompleted) &#123; for (int i = 0; i &lt;= progress; i++) &#123; System.out.println("下载进度： " + i + "%"); try &#123; Thread.sleep(200); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; &#125; // 然后b就可以在f(CallBack callback)方法中调用A的方法 ——B类调用A类的某个方法D ——场景5 if (progress == 100) &#123; onDownloadCompleted.onSuccess(); &#125; else &#123; onDownloadCompleted.onFail(); &#125; &#125; &#125; 然后是Test类方法：Test类实现了OnDownloadCompleted接口，实现了onSuccess()方法跟onFail()方法（场景1）；Test类包含了Download类的引用（场景2），Download的实例调用了setOnDownloadCompletedListener()方法（场景4）。 12345678910111213141516171819202122232425262728293031323334/** * Class A实现接口CallBack callback ——场景1 * Created by zhangyongming on 2016/12/12. */ public class Test implements OnDownloadCompleted &#123; public static void main(String[] args) &#123; // class A中包含一个class B的引用b ——场景2 Download download = new Download(20); // A里的B的引用调用B的方法 f(CallBack callback) ——A类调用B类的某个方法C ——场景4 download.setOnDownloadCompletedListener(new Test()); &#125; @Override public void onSuccess() &#123; System.out.println("┏━━━━━┳━━━━━┓"); System.out.println("┃ ┃ ┃"); System.out.println("┃ ┃"); System.out.println("┣━ 下载完成 ━┫"); System.out.println("┃ ┃"); System.out.println("┃ ┃ ┃"); System.out.println("┗━━━━━┻━━━━━┛"); &#125; @Override public void onFail() &#123; System.out.println("┏ ━ ━ ┳ ━ ━ ┓"); System.out.println(" "); System.out.println("┃ ┃"); System.out.println(" 下载失败 "); System.out.println("┃ ┃"); System.out.println(" "); System.out.println("┗ ━ ━ ┻ ━ ━ ┛"); &#125; &#125; 上述demo我们输入一个int值之后，变开始进行循环，模拟下载过程，然后根据下载结果调用相应的方法展示数据。输出结果如下：]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Android Studio添加日志过滤]]></title>
+      <url>%2F2016%2F12%2F07%2FAndroid-Studio%E6%B7%BB%E5%8A%A0%E6%97%A5%E5%BF%97%E8%BF%87%E6%BB%A4%2F</url>
+      <content type="text"><![CDATA[点击下方的 Android Monitor 点击右侧的选项菜单 点击菜单下拉列表中的 Edit Filter Configuration，打开配置界面 配置界面说明 第1部分是为这个过滤器输入名称，第2部分是一些过滤信息的配置：Log Tag 是根据log.d(&quot;XXX&quot;,&quot;show&quot;);方法中的XXX参数属性过滤，配置该项之后只会显示日志中Tag为XXX的日志;Log Message是根据日志信息过滤；Package Name是根据包名过滤；Log Level是配置显示日志的级别，一般看自己需求配置；配置完成之后点击OK确认。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Mac使用Dryrun做到不用运行Android Studio即可在模拟器安装预览GitHub开源项目]]></title>
+      <url>%2F2016%2F12%2F06%2Fmac%E4%BD%BF%E7%94%A8Dryrun%E5%81%9A%E5%88%B0%E4%B8%8D%E7%94%A8%E8%BF%90%E8%A1%8CAndroid-Studio%E5%8D%B3%E5%8F%AF%E5%9C%A8%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%AE%89%E8%A3%85%E9%A2%84%E8%A7%88GitHub%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%2F</url>
+      <content type="text"><![CDATA[Dryrun是GitHub上的一个开源工具，它最强大的地方在于可以只用一行命令行即可让你运行GitHub上的项目，是不是很激动？ 通常我们需要预览GitHub上的开源项目一般会做以下几步： 找到这个项目 点击项目右侧的 Clone or download下载整个项目资源 解压缩下载下来的zip文件 导入Android Studio 同步gradle配置 如果缺少配置文件或者项目报错，则需要先排错 运行项目并预览 如果正巧是自己希望的效果，留下，如果不是，删除。 然而Dryrun只需要一行命令即可，剩下的我们都不用操心，只需安静等待即可。。。。 下面来说说如何在mac上配置吧。 首先安装前需要配置ANDROID_HOME环境变量，方法如下： 启动Terminal终端工具 输入cd ~/ 进入当前用户的home目录 或cd /Users/YourUserName 如果不存在则创建： touch .bash_profile 如果存在,就打开并编辑：open .bash_profile 在里面添加sdk的tools和platform-tools的路径,注意每个路径要用 : 隔开,并且这个路径换成你自己的刚才解压后的sdk的实际路径. 1export PATH=$PATH:/Users/youname/android/soft/adt-bundle-mac-x8664-20130522/sdk/platform-tools:/Users/youname/android/soft/adt-bundle-mac-x8664-20130522/sdk/tools(具体的文件名你自己对应) 保存关闭 更新： source .bash_profile ok了,在Terminal终端工具里输入adb -version看看,是否出来类似的界面: Android Debug Bridge version 1.0.31 如果出来了,说明已经成功了. 然后安装Dryrun，使用如下命令 $ sudo gem install dryrun 顺利的话应该就安装成功了，如果报错一般会有类似ERROR: Failed to build gem native extension. 这种错误，经过各种查资料折腾，基本上确定这个错误的一般是ruby的相关依赖文件未安装完全（网上查的，如有错误还望指正）。一般情况安装xcode后貌似就能解决，如果还是不行请自行Google或百度。安装完成后便可使用，使用方法为dryrun + 项目地址，如：dryrun https://github.com/cesarferreira/android-helloworld，接下来就是见证奇迹的时候了（图是借用dryrun官方的效果图）。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Sublime Text中的属性设置]]></title>
+      <url>%2F2016%2F10%2F28%2FSublime-Text%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE%2F</url>
+      <content type="text"><![CDATA[12345678&#123; "font_face": "Courier New", "font_size": 14.0, "update_check": false, "open_files_in_new_window": false, "hot_exit": false, "remember_open_files": false &#125; 这些配置是需要放在Preference--&gt;settings-User下的，其中 font_face 是设置字体类型的，font_size 是设置字体大小的，update_check 表示是否开启检查更新， open_files_in_new_window表示是否在新窗口中打开文件，remember_open_files 表示是否记住上次打开的文件。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[关于toolbar菜单设置了always后不显示的问题]]></title>
+      <url>%2F2016%2F10%2F27%2F%E5%85%B3%E4%BA%8Etoolbar%E8%8F%9C%E5%8D%95%E8%AE%BE%E7%BD%AE%E4%BA%86always%E5%90%8E%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"><![CDATA[我们一般写menu文件时会有如下写法： 1234567&lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;menu xmlns:android="http://schemas.android.com/apk/res/android"&gt; &lt;item android:id="@+id/menu011" android:title="hehe" android:icon="@mipmap/ic_launcher" android:showAsAction="always"/&gt; &lt;/menu&gt; 这样写出来的menu是不会再toolbar上面显示的，跟设置的never一样都在隐藏菜单里。解决这个问题的办法其实很简单，如下： 12345678&lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"&gt; &lt;item android:id="@+id/menu_home" android:icon="@mipmap/home" app:showAsAction="always" android:title="@string/menu_home"/&gt; &lt;/menu&gt; 新增一句 1xmlns:app="http://schemas.android.com/apk/res-auto" 将 1android:showAsAction="always" 改成 1app:showAsAction="always" 即可解决。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[友盟统计sdk集成及多渠道打包]]></title>
+      <url>%2F2016%2F10%2F13%2F%E5%8F%8B%E7%9B%9F%E7%BB%9F%E8%AE%A1sdk%E9%9B%86%E6%88%90%E5%8F%8A%E5%A4%9A%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%2F</url>
+      <content type="text"><![CDATA[友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。 然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk： 12// 友盟统计的sdk compile 'com.umeng.analytics:analytics:latest.integration' 然后在AndroidManifest.xml的Application标签下配置 1234567&lt;!-- 友盟appid --&gt; &lt;meta-data android:name="UMENG_APPKEY" android:value="XXX"&gt; &lt;/meta-data&gt; &lt;!--此处配置是为了方便酷传多渠道打包 --&gt; &lt;meta-data android:value="" android:name="UMENG_CHANNEL"/&gt; 其中XXX为你自己的Appkey，UMENG_CHANNEL的值为空字符串主要是为了使用酷传的多渠道打包。然后找到程序的入口Activity，即AndroidManifest.xml里配置了如下代码的Activity 1234567&lt;activity android:name=".MainActivity"&gt; &lt;intent-filter&gt; &lt;action android:name="android.intent.action.MAIN"/&gt; &lt;category android:name="android.intent.category.LAUNCHER"/&gt; &lt;/intent-filter&gt; &lt;/activity&gt; 在该Activity的onResum()跟onPause()方法里添加如下代码 1234567891011@Override protected void onResume() &#123; super.onResume(); MobclickAgent.onResume(this); &#125; @Override protected void onPause() &#123; super.onPause(); MobclickAgent.onPause(this); &#125; 至此，友盟统计的基本功能已经集成完毕。然后就是使用酷传进行多渠道打包了，先在酷传官网下载酷传的软件，然后申请账号，打开软件并登录 选择 上方的 工具箱 ，打开如下界面 选择 生成多渠道包，然后选择需要多渠道打包的apk文件 点击下一步，在弹出的渠道包签名对话框中选择相应的release版的keystore文件，并填写相应的信息 然后点击生成渠道包，就会出现生成渠道包的界面，完成后会在原始的apk文件所在的目录生成一个叫做 酷传智能分包 的文件夹，里面就是生成的多渠道包。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[记录友盟分享，第三方登录遇到的坑]]></title>
+      <url>%2F2016%2F08%2F26%2F%E8%AE%B0%E5%BD%95%E5%8F%8B%E7%9B%9F%E5%88%86%E4%BA%AB%EF%BC%8C%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91%2F</url>
+      <content type="text"><![CDATA[最近公司项目上需要用到分享跟第三方登录，由于友盟集成的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。 坑1：QQ第三方登录的坑 QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样的，如果你给腾讯那边上传的是一个debug版的apk，那么这个AppID及Appkey就是debug版的，然后你的第三方登录只有在使用dubug版的时候才能用，在正式包下会提示错误：应用不是最新的（100044）这个错误，所以这一点一定要注意，如果你给腾讯上传的是一个release版的apk，那么你以后的每次调试QQ登录都得用release的签名打包，我的做法是，调试的时候直接用release版的签名编译，具体参考：这篇文章的做法 。 QQ的第二个坑，QQ的接口返回的唯一码是一个叫openId的东东，其实我一直不明白它为什么不返回一个QQ号啊，因为这个东西不管在哪个平台都是唯一的，算了，不扯这些了，既然人家不给返回QQ号码自然有人家的想法，也许是为了用户隐私之类的。现在就说说这个openId，据我的理解，应该是与应用的appId还有应用的签名有关（个人理解，如有错误还望指正），所以不同的应用返回的openId是不一样的，在这里我就遇到坑了，因为我们公司iOS开发的比Android早半年，所以当初ios自己用自己的账号申请了一个ios的AppID及Appkey，现在Android这边我用公司的账号在应用宝上架的app，所以同一个QQ账号的第三方登录在ios跟Android返回的openId都不一样，经过咨询腾讯客服（QQ：800013811），告诉我只有一个办法解决，那就是把一方的应用转让给另一方，保证ios的跟Android的都在一个开发者账号下，然后再申请数据互通。。。。只有这样，才能保证相同的QQ号在两个平台的openId才能一致。 坑2：新浪微博的坑 新浪这个就比较坑了，由于我用的是Android Studio，我直接将新浪的sdk里的libs下的那些so文件夹直接拷贝到我的libs里面，原以为这样就好了（貌似在ADT下确实就好了），结果运行各种闪退，日志也没啥特殊的地方，死活不知道原因，最后纠结了两天，想着可能是so文件的原因，就百度了下Android Studio如何导入so文件，按照操作执行了之后，瞬间就好了，简直汗颜。关于在Android Studio下如何导入so文件请参考：这篇文章 或者 这篇文章。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[如何去掉Android Studio的注释警告]]></title>
+      <url>%2F2016%2F08%2F11%2F%E5%A6%82%E4%BD%95%E5%8E%BB%E6%8E%89Android-Studio%E7%9A%84%E6%B3%A8%E9%87%8A%E8%AD%A6%E5%91%8A%2F</url>
+      <content type="text"><![CDATA[我们知道，使用Android Studio（以下简称AS）如果给一个方法添加文档注释时，方法里的参数也必须添加注释，否则会有警告。如下： 其实给参数添加注释是个很好的习惯，但是如果是重写的或者实现接口的抽象方法，有时候我们不需要给参数加注释，然而AS会报警告，右侧会有黄色的横条，这些警告跟代码警告混在一起，很影响阅读，所以有时候我们需要去掉。 具体步骤：File-&gt;Settings-&gt;Editor-&gt;Inspections,在右侧找到Javadoc issues下的Declaration has Javadoc problems右侧的勾去掉然后点击Apply或者OK即可。 然后就可以看到效果了。]]></content>
+    </entry>
+
+    
   
   
 </search>
