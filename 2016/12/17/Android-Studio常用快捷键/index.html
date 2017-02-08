@@ -94,7 +94,7 @@
 <meta property="og:description" content="Android Studio自发布第一版以来已经三年多了，现在已经相当稳定了，并且Google已经停止了对eclipse的支持，so，还在用eclipse的小伙伴们，也是时候换工具了。
 本打算写一篇Android Studio的简单使用的教程，由于时间有限，加上本人使用Android Studio时间不是很久，水平有限，故暂时搁置。本文主要记录Android Studio的常用快捷键。
 建议大家使">
-<meta property="og:updated_time" content="2017-02-08T05:33:32.000Z">
+<meta property="og:updated_time" content="2017-02-08T05:52:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studio常用快捷键">
 <meta name="twitter:description" content="Android Studio自发布第一版以来已经三年多了，现在已经相当稳定了，并且Google已经停止了对eclipse的支持，so，还在用eclipse的小伙伴们，也是时候换工具了。
@@ -405,14 +405,174 @@
 <p>本打算写一篇Android Studio的简单使用的教程，由于时间有限，加上本人使用Android Studio时间不是很久，水平有限，故暂时搁置。本文主要记录Android Studio的常用快捷键。</p>
 <p>建议大家使用原生的Android Studio的快捷键，而不要修改快捷键为eclipse模式等其他模式，主要是因为Android Studio是基于JetBrains的IntelliJ IDEA开发的，JetBrains旗下有一众非常优秀的IDE，类似大名鼎鼎的<a href="http://baike.baidu.com/view/2735945.htm" target="_blank" rel="external">IntelliJ IDEA</a> ，<a href="http://baike.baidu.com/view/8910091.htm" target="_blank" rel="external">PHPStorm</a>，<a href="http://baike.baidu.com/view/8263182.htm" target="_blank" rel="external">PyCharm</a>，<a href="http://baike.baidu.com/view/5443872.htm" target="_blank" rel="external">WebStorm</a>等几乎各个领域的开发工具，也就是说你学会了其中一款的快捷键，再上手其他的就很简单了。以下是一些最基本的常用快捷键，需要查看所有的快捷键请去<code>settings --&gt; keymap</code> 里进行查看修改。注意:Mac系统需要将所有的ctrl换成command，alt换成option。</p>
 <ul>
-<li><p>常用快捷键</p>
-<p>| <strong>Action</strong>                      | <strong>Mac OSX</strong>              | <strong>Win/Linux</strong>                |<br>| :—————————— | :———————– | :————————— |<br>| 代码提示                            |                          | Shift + 空格 / ctrl + alt + 空格 |<br>| 导包,提示错误                         |                          | Alt + enter                  |<br>| 修改变量名（全部）                       |                          | Shift + F6                   |<br>| 复制当前行到下一行                       | Command + D              |                              |<br>| 调出菜单，setter getter constructor等 |                          | Ctrl + enter                 |<br>| 调出surround with菜单               |                          | alt + command + T            |<br>| 注释代码(//)                        | Cmd + /                  | Ctrl + /                     |<br>| 注释代码(/**/)                      | Cmd + Option + /         | Ctrl + Alt + /               |<br>| 格式化代码                           | Cmd + Option + L         | Ctrl + Alt + L               |<br>| 清除无效包引用                         | Option + Control + O     | Alt + Ctrl + O               |<br>| 查找                              | Cmd + F                  | Ctrl + F                     |<br>| 查找+替换                           | Cmd + R                  | Ctrl + R                     |<br>| 上下移动代码                          | Option + Shift + Up/Down | Alt + Shift + Up/Down        |<br>| 删除行                             | Cmd + Delete             | Ctrl + Y                     |<br>| 扩大缩小选中范围                        | Option + Up/Down         | Ctrl + W/Ctrl + Shift + W    |<br>| 快捷生成结构体                         | Cmd + Option + T         | Ctrl + Alt + T               |<br>| 快捷覆写方法                          | Ctrl + O                 | Ctrl + O                     |<br>| 快捷定位到行首/尾                       | Cmd + Left/Right         | Ctrl + Left/Right            |<br>| 折叠展开代码块                         | Cmd + Plus,Minus         | Ctrl + Plus/Minus            |<br>| 折叠展开全部代码块                       | Cmd + Shift + Plus,Minus | Ctrl + Shift + Plus,Minus    |<br>| 文件方法结构                          | Cmd + F12                | Ctrl + F12                   |<br>| 查找方法调用的位置                       | Ctrl + Option + H        | Ctrl + Alt + H               |<br>| 大小写转换                           | Cmd + Shift + U          | Ctrl + Shift + U             |</p>
-</li>
-<li><p>调试快捷键</p>
-<p>| Action                                  | 快捷键          |<br>| :————————————– | :———– |<br>| 单步执行,不进入方法；逐过程，相当于下一步                   | F8           |<br>| 单步执行，进入方法                               | F7           |<br>| debug时选中查看值                             | alt+f8       |<br>| 这个是强制进入代码                               | alt+shift+f7 |<br>| 相当于eclipse的f8跳到下一个断点，也相当于eclipse的f7跳出函数 | shift+f8     |<br>| 执行下一轮                                   | alt + F9     |</p>
-</li>
+<li>常用快捷键</li>
 </ul>
-<p>如果想要隐藏所有工具栏、工具窗口和编辑器选项卡，请点击 <strong>View &gt; Enter Distraction Free Mode</strong>。 此操作可启用<em>无干扰模式</em>。 要退出”无干扰模式”，请点击 <strong>View &gt; Exit Distraction Free Mode</strong>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Action</strong></th>
+<th style="text-align:left"><strong>Mac OSX</strong></th>
+<th style="text-align:left"><strong>Win/Linux</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">代码提示</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Shift + 空格 / ctrl + alt + 空格</td>
+</tr>
+<tr>
+<td style="text-align:left">导包,提示错误</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Alt + enter</td>
+</tr>
+<tr>
+<td style="text-align:left">修改变量名（全部）</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Shift + F6</td>
+</tr>
+<tr>
+<td style="text-align:left">复制当前行到下一行</td>
+<td style="text-align:left">Command + D</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">调出菜单，setter getter constructor等</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Ctrl + enter</td>
+</tr>
+<tr>
+<td style="text-align:left">调出surround with菜单</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">alt + command + T</td>
+</tr>
+<tr>
+<td style="text-align:left">注释代码(//)</td>
+<td style="text-align:left">Cmd + /</td>
+<td style="text-align:left">Ctrl + /</td>
+</tr>
+<tr>
+<td style="text-align:left">注释代码(/**/)</td>
+<td style="text-align:left">Cmd + Option + /</td>
+<td style="text-align:left">Ctrl + Alt + /</td>
+</tr>
+<tr>
+<td style="text-align:left">格式化代码</td>
+<td style="text-align:left">Cmd + Option + L</td>
+<td style="text-align:left">Ctrl + Alt + L</td>
+</tr>
+<tr>
+<td style="text-align:left">清除无效包引用</td>
+<td style="text-align:left">Option + Control + O</td>
+<td style="text-align:left">Alt + Ctrl + O</td>
+</tr>
+<tr>
+<td style="text-align:left">查找</td>
+<td style="text-align:left">Cmd + F</td>
+<td style="text-align:left">Ctrl + F</td>
+</tr>
+<tr>
+<td style="text-align:left">查找+替换</td>
+<td style="text-align:left">Cmd + R</td>
+<td style="text-align:left">Ctrl + R</td>
+</tr>
+<tr>
+<td style="text-align:left">上下移动代码</td>
+<td style="text-align:left">Option + Shift + Up/Down</td>
+<td style="text-align:left">Alt + Shift + Up/Down</td>
+</tr>
+<tr>
+<td style="text-align:left">删除行</td>
+<td style="text-align:left">Cmd + Delete</td>
+<td style="text-align:left">Ctrl + Y</td>
+</tr>
+<tr>
+<td style="text-align:left">扩大缩小选中范围</td>
+<td style="text-align:left">Option + Up/Down</td>
+<td style="text-align:left">Ctrl + W/Ctrl + Shift + W</td>
+</tr>
+<tr>
+<td style="text-align:left">快捷生成结构体</td>
+<td style="text-align:left">Cmd + Option + T</td>
+<td style="text-align:left">Ctrl + Alt + T</td>
+</tr>
+<tr>
+<td style="text-align:left">快捷覆写方法</td>
+<td style="text-align:left">Ctrl + O</td>
+<td style="text-align:left">Ctrl + O</td>
+</tr>
+<tr>
+<td style="text-align:left">快捷定位到行首/尾</td>
+<td style="text-align:left">Cmd + Left/Right</td>
+<td style="text-align:left">Ctrl + Left/Right</td>
+</tr>
+<tr>
+<td style="text-align:left">折叠展开代码块</td>
+<td style="text-align:left">Cmd + Plus,Minus</td>
+<td style="text-align:left">Ctrl + Plus/Minus</td>
+</tr>
+<tr>
+<td style="text-align:left">折叠展开全部代码块</td>
+<td style="text-align:left">Cmd + Shift + Plus,Minus</td>
+<td style="text-align:left">Ctrl + Shift + Plus,Minus</td>
+</tr>
+<tr>
+<td style="text-align:left">文件方法结构</td>
+<td style="text-align:left">Cmd + F12</td>
+<td style="text-align:left">Ctrl + F12</td>
+</tr>
+<tr>
+<td style="text-align:left">查找方法调用的位置</td>
+<td style="text-align:left">Ctrl + Option + H</td>
+<td style="text-align:left">Ctrl + Alt + H</td>
+</tr>
+<tr>
+<td style="text-align:left">大小写转换</td>
+<td style="text-align:left">Cmd + Shift + U</td>
+<td style="text-align:left">Ctrl + Shift + U</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>调试快捷键</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Action</th>
+<th style="text-align:left">快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单步执行,不进入方法；逐过程，相当于下一步</td>
+<td style="text-align:left">F8</td>
+</tr>
+<tr>
+<td style="text-align:left">单步执行，进入方法</td>
+<td style="text-align:left">F7</td>
+</tr>
+<tr>
+<td style="text-align:left">debug时选中查看值</td>
+<td style="text-align:left">alt+f8</td>
+</tr>
+<tr>
+<td style="text-align:left">这个是强制进入代码</td>
+<td style="text-align:left">alt+shift+f7</td>
+</tr>
+<tr>
+<td style="text-align:left">相当于eclipse的f8跳到下一个断点，也相当于eclipse的f7跳出函数</td>
+<td style="text-align:left">shift+f8</td>
+</tr>
+<tr>
+<td style="text-align:left">执行下一轮</td>
+<td style="text-align:left">alt + F9</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>如果想要隐藏所有工具栏、工具窗口和编辑器选项卡，请点击 <strong>View &gt; Enter Distraction Free Mode</strong>。 此操作可启用<em>无干扰模式</em>。 要退出”无干扰模式”，请点击 <strong>View &gt; Exit Distraction Free Mode</strong>。</li>
+</ul>
 
       
     </div>
