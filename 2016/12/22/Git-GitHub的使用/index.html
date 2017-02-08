@@ -150,7 +150,7 @@
 <meta property="og:image" content="https://ww1.sinaimg.cn/large/006y8lValy1fciubbtua6j30bj020aa5.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006y8lValy1fciua4e96dj30bj03raal.jpg">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006y8lValy1fciubn5irwj30bj01u0sw.jpg">
-<meta property="og:updated_time" content="2017-02-08T03:11:42.000Z">
+<meta property="og:updated_time" content="2017-02-08T10:09:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git&GitHub的使用">
 <meta name="twitter:description" content="一、     前言1.     简介Git是Linux作者Linus Torvalds开发的一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
@@ -473,16 +473,19 @@
 <p>Git 的工作完全依赖于这类指纹字串，所以你会经常看到这样的哈希值。实际上，所有保存在 Git 数据库中的东西都是用此哈希值来作索引的，而不是靠文件名。</p>
 <h1 id="二、-安装"><a href="#二、-安装" class="headerlink" title="二、     安装"></a>二、     安装</h1><p>git各平台的下载地址：<a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></p>
 <p><strong>Windows</strong>：点击下载的exe文件，一路下一步，几乎不用修改默认配置即可。完成之后再开始菜单下可以看见git的文件夹，里面包含命令行工具跟GUI工具，看个人喜好用哪个。</p>
-<p><strong>Linux</strong>：Ubuntu下安装使用命令 <code>sudo apt-get install git</code> 安装完成后使用<code>git —version</code>命令检查是否安装成功。</p>
+<p><strong>Linux</strong>：Ubuntu下安装使用命令 <code>sudo apt-get install git</code> 安装完成后使用<code>git --version</code>命令检查是否安装成功。</p>
 <p><img src="https://ww4.sinaimg.cn/large/006y8lValy1fciua1kkzvj30bj05jwel.jpg" alt="img"></p>
 <p><strong>Mac</strong>：mac系统自带，貌似不用安装，检查是否安装方式同Linux。</p>
 <p><img src="https://ww3.sinaimg.cn/large/006y8lValy1fciubm8umsj30bj021q30.jpg" alt="img"></p>
 <h1 id="三、-日常使用"><a href="#三、-日常使用" class="headerlink" title="三、     日常使用"></a>三、     日常使用</h1><h2 id="1-创建版本库"><a href="#1-创建版本库" class="headerlink" title="1.     创建版本库"></a>1.     创建版本库</h2><p>什么是版本库呢？版本库又名仓库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。</p>
-<p>初始化一个Git仓库，使用git init命令。</p>
-<p>然后是基本的配置，使用gitconfig –global user.name “zhangym”配置用户名，使用<code>git config --global user.email yongming9011@163.com</code>配置邮件地址。</p>
+<p>初始化一个Git仓库，使用<code>git init</code>命令。</p>
+<p>然后是基本的配置，使用<code>git config --global user.name “zhangym”</code>配置用户名，使用<code>git config --global user.email yongming9011@163.com</code>配置邮件地址。</p>
 <p>然后添加文件到Git仓库，分两步：</p>
-<p>第一步，使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；如果一次修改文件过多，有三个命令可以参考：<code>git add -A</code>  提交所有变化,包括修改的，删除的，新建的文件。 <code>git add -u</code>  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)。<code>git add .</code>  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件。如果之前使用了<code>gita dd</code> 命令将文件提交到了缓冲区，但是暂时没有使用<code>git commit</code>命令，然后对文件进行了修改，此时如果需要提交则需要使用<code>git commit -am “提交描述”</code>，如果使用<code>git commit -m “提交描述”</code>会出现<em>fatal: Paths with -a does not make sense.</em>的错误提示。</p>
-<p>第二步，使用命令<code>git commit -m “say some words”</code>，完成。简单解释一下git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。</p>
+<ul>
+<li>第一步，使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；如果一次修改文件过多，有三个命令可以参考：<code>git add -A</code>  提交所有变化,包括修改的，删除的，新建的文件。 <code>git add -u</code>  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)。<code>git add .</code>  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件。如果之前使用了<code>gita dd</code> 命令将文件提交到了缓冲区，但是暂时没有使用<code>git commit</code>命令，然后对文件进行了修改，此时如果需要提交则需要使用<code>git commit -am “提交描述”</code>，如果使用<code>git commit -m “提交描述”</code>会出现<em>fatal: Paths with -a does not make sense.</em>的错误提示。</li>
+<li>第二步，使用命令<code>git commit -m “say some words”</code>，完成。简单解释一下git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。</li>
+</ul>
+<p><code>git commit -m &quot;xxx&quot;</code> 只会提交添加到缓存区的文件（只提交添加的)；<code>git commit -a -m &quot;xxx&quot;</code>能提交修改过，但是没有添加到缓存区的文件（修改过的就能提交）。 </p>
 <h3 id="l-关于工作区跟暂缓区"><a href="#l-关于工作区跟暂缓区" class="headerlink" title="l 关于工作区跟暂缓区"></a>l 关于工作区跟暂缓区</h3><p><strong>工作区（Working Directory）：</strong>创建版本库时新建的那个目录，就是一个工作区。</p>
 <p><strong>版本库（Repository）：</strong>工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。</p>
 <p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</p>
@@ -496,7 +499,7 @@
 <p>你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。所以，git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。</p>
 <p>所以，同一个文件，如果已经执行了add命令，然后再修改，再执行commit命令，其实修改是无效的。</p>
 <h2 id="2-管理版本库"><a href="#2-管理版本库" class="headerlink" title="2.     管理版本库"></a>2.     管理版本库</h2><p>要随时掌握工作区的状态，使用<code>git status</code>命令。</p>
-<p>如果<code>git status</code>告诉你有文件被修改过，用<code>git dif</code>f可以查看修改内容。</p>
+<p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。</p>
 <h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a><strong>版本回退</strong></h3><p>Ø  使用回退命令前，用git log可以查看提交历史，以便确定要回退到哪个版本。如果嫌输出信息太多，看得眼花缭乱的，可以试试加上<strong>–pretty=oneline</strong>参数，即<code>git log –pretty=oneline</code></p>
 <p><img src="https://ww2.sinaimg.cn/large/006y8lValy1fciu9z5vh0j30bj036aao.jpg" alt="img"></p>
 <p>和SVN不一样，Git的commit id不是1，2，3……递增的数字，而是一个SHA1计算出来的一个非常大的数字，用十六进制表示，而且你看到的commit id和我的肯定不一样，以自己的为准。为什么commit id需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，大家每人都有一个完成的版本库，且每个人手上修改的东西都不一样，如果大家都用1，2，3……作为版本号，你手上的1版本跟我手上的1版本内容肯定不一样，那肯定就冲突了。</p>
@@ -506,7 +509,7 @@
 <p><img src="https://ww3.sinaimg.cn/large/006y8lValy1fciua2vroaj30b1061q31.jpg" alt="img"></p>
 <p>每一次操作相当于把HEAD移动过来移动过去，所以速度特别快。而SVN等其他的则是相当于修改文件，所以效率上比git要差。</p>
 <h2 id="3-管理修改"><a href="#3-管理修改" class="headerlink" title="3.     管理修改"></a>3.     管理修改</h2><ol>
-<li><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，使用<code>git checkout -- &lt;file&gt;</code>命令，命令<code>git checkout — readme.md</code>意思就是，把readme.md文件在工作区的修改全部撤销，这里有两种情况：</p>
+<li><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，使用<code>git checkout -- &lt;file&gt;</code>命令，命令<code>git checkout -- readme.md</code>意思就是，把readme.md文件在工作区的修改全部撤销，这里有两种情况：</p>
 <ul>
 <li>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</li>
 <li>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</li>
@@ -618,7 +621,7 @@
 <p>当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它，但是，等等，当前正在dev上进行的工作还没有提交，并不是你不想提交，而是工作只进行到一半，还没法提交，预计完成还需1天时间。但是，必须在两个小时内修复该bug，怎么办？</p>
 <p>幸好，Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。</p>
 <p><img src="https://ww1.sinaimg.cn/large/006y8lValy1fciua9f9g9j30bj05mjs4.jpg" alt="img"></p>
-<p>然后使用<code>git statu</code>s查看会发现工作区是干净的，其实只是我们隐藏了现在，因此可以放心地创建分支来修复bug。</p>
+<p>然后使用<code>git status</code>查看会发现工作区是干净的，其实只是我们隐藏了现在，因此可以放心地创建分支来修复bug。</p>
 <p>首先确定要在哪个分支上修复bug，假定需要在master分支上修复，就从master创建临时分支：假定我们现在需要修复issue-1的bug，我们可以从master上新建一个issue-1分支，然后修复问题，合并分支并删除分支。</p>
 <p><img src="https://ww4.sinaimg.cn/large/006y8lValy1fciua6mg00j30bj06h75c.jpg" alt="img"></p>
 <p>现在我们需要恢复工作现场，有两种方式：一是用<code>git stash apply</code>恢复，但是恢复后，stash内容并不删除，你需要用<code>git stash drop</code>来删除；另一种方式是用<code>git stash pop</code>，恢复的同时把stash内容也删了。</p>
@@ -663,10 +666,10 @@
 <p><img src="https://ww3.sinaimg.cn/large/006y8lValy1fciua2ehxtj30bj0263yr.jpg" alt="img"></p>
 <p>因此，多人协作的工作模式通常是这样：</p>
 <ul>
-<li>首先，可以试图用git push origin branch-name推送自己的修改；</li>
-<li>如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；</li>
+<li>首先，可以试图用<code>git push origin branch-name</code>推送自己的修改；</li>
+<li>如果推送失败，则因为远程分支比你的本地更新，需要先用<code>git pull</code>试图合并；</li>
 <li>如果合并有冲突，则解决冲突，并在本地提交；</li>
-<li>没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！ </li>
+<li>没有冲突或者解决掉冲突后，再用<code>git push origin branch-name</code>推送就能成功！ </li>
 </ul>
 <p>如果<code>git pull</code>提示<em>“no tracking information”</em>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to=origin/dev</code>这就是多人协作的工作模式，一旦熟悉了，就非常简单。</p>
 <p><strong>小结：</strong></p>
