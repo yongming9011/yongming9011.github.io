@@ -96,13 +96,15 @@
 首先检查hexo文件夹下的_config.yml文件是否包含以下配置：
 12345search:  path: search.xml  field: post  format: html  limit: 10000
 如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入http://zhangym.me/se">
-<meta property="og:updated_time" content="2017-02-08T08:15:03.000Z">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/006y8lValy1fcj4zxce77j31b20c2why.jpg">
+<meta property="og:updated_time" content="2017-02-08T08:23:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo问题汇总">
 <meta name="twitter:description" content="搜索功能不可用或点击搜索不弹出搜索框
 首先检查hexo文件夹下的_config.yml文件是否包含以下配置：
 12345search:  path: search.xml  field: post  format: html  limit: 10000
 如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入http://zhangym.me/se">
+<meta name="twitter:image" content="https://ww1.sinaimg.cn/large/006y8lValy1fcj4zxce77j31b20c2why.jpg">
 
 
 
@@ -408,7 +410,9 @@
 <li><p>搜索功能不可用或点击搜索不弹出搜索框</p>
 <p>首先检查hexo文件夹下的_config.yml文件是否包含以下配置：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attr">search:</span></div><div class="line"><span class="attr">  path:</span> search.xml</div><div class="line"><span class="attr">  field:</span> post</div><div class="line"><span class="attr">  format:</span> html</div><div class="line"><span class="attr">  limit:</span> <span class="number">10000</span></div></pre></td></tr></table></figure>
-<p>如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入<code>http://zhangym.me/search.xml</code>即博客网址后添加<code>/search.xml</code>看看是否能正常访问，若该xml文件报错，则说明某一篇文章的内容有乱码或者其他字符导致生成的search.xml不是标准的xml文件，导致搜索功能不可用，此时只需根据对应的提示，用代码编辑器打开/hexo/public/search.xml，去问题所在的行查看并修改问题即可。修改完毕再次使用<code>http://zhangym.me/search.xml</code>检查，如果正常，搜索功能应该就好了。</p>
+<p>如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入<code>http://zhangym.me/search.xml</code>即博客网址后添加<code>/search.xml</code>看看是否能正常访问，若该xml文件打开出来类似如下错误：</p>
+<p><img src="https://ww1.sinaimg.cn/large/006y8lValy1fcj4zxce77j31b20c2why.jpg" alt=""></p>
+<p>说明某一篇文章的内容有乱码或者其他字符导致生成的search.xml不是标准的xml文件，导致搜索功能不可用，此时只需根据对应的提示，用代码编辑器打开/hexo/public/search.xml，去问题所在的行查看并修改问题即可。修改完毕再次使用<code>http://zhangym.me/search.xml</code>检查，如果正常，搜索功能应该就好了。</p>
 </li>
 </ul>
 
@@ -556,7 +560,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
