@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="从百草园到三味书屋。" />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -84,55 +84,46 @@
 
 
 
-<meta name="description" content="新建博客
-$ hexo new 博客名
+<meta name="description" content="新建博客$ hexo new 博客名
 比如，新建一个名为“博客使用方法”的博客：
 $ hexo new 博客使用方法
-
 为博客添加标签以及分类
-
 打开/hexo/source/_posts文件夹，找到刚才新建的博客并打开
 
 修改开头内容
 
 title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧
 
-其中：tags即为文章的标签，可以不写">
+其中：tags即为文章的标签，可以不写，如果要">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客使用方法">
 <meta property="og:url" content="https://yongming9011.github.io/2017/02/07/博客使用方法/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
-<meta property="og:description" content="新建博客
-$ hexo new 博客名
+<meta property="og:description" content="新建博客$ hexo new 博客名
 比如，新建一个名为“博客使用方法”的博客：
 $ hexo new 博客使用方法
-
 为博客添加标签以及分类
-
 打开/hexo/source/_posts文件夹，找到刚才新建的博客并打开
 
 修改开头内容
 
 title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧
 
-其中：tags即为文章的标签，可以不写">
-<meta property="og:updated_time" content="2017-02-08T08:29:11.000Z">
+其中：tags即为文章的标签，可以不写，如果要">
+<meta property="og:updated_time" content="2017-02-08T09:00:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客使用方法">
-<meta name="twitter:description" content="新建博客
-$ hexo new 博客名
+<meta name="twitter:description" content="新建博客$ hexo new 博客名
 比如，新建一个名为“博客使用方法”的博客：
 $ hexo new 博客使用方法
-
 为博客添加标签以及分类
-
 打开/hexo/source/_posts文件夹，找到刚才新建的博客并打开
 
 修改开头内容
 
 title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧
 
-其中：tags即为文章的标签，可以不写">
+其中：tags即为文章的标签，可以不写，如果要">
 
 
 
@@ -434,14 +425,10 @@ title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧
       
 
       
-        <ul>
-<li><p>新建博客</p>
-<p><code>$ hexo new 博客名</code></p>
+        <h3 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h3><p><code>$ hexo new 博客名</code></p>
 <p>比如，新建一个名为“博客使用方法”的博客：</p>
 <p><code>$ hexo new 博客使用方法</code></p>
-</li>
-<li><p>为博客添加标签以及分类</p>
-<ul>
+<h3 id="为博客添加标签以及分类"><a href="#为博客添加标签以及分类" class="headerlink" title="为博客添加标签以及分类"></a>为博客添加标签以及分类</h3><ul>
 <li><p>打开/hexo/source/_posts文件夹，找到刚才新建的博客并打开</p>
 </li>
 <li><p>修改开头内容</p>
@@ -452,30 +439,38 @@ title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧
 <blockquote>
 <p>tags:[博客,使用,方法]</p>
 </blockquote>
-<p>每个标签后的逗号必须是英文逗号。</p>
-<p>categories即为文章的分类</p>
+<p>每个标签后的逗号必须是英文逗号“,”，categories即为文章的分类。</p>
 </li>
 </ul>
-</li>
-<li><p>如果需要手动实现阅读全文功能，则在需要显示阅读全文按钮的地方添加<code>&lt;!--more--&gt;</code>，则文章会从此处截断，显示阅读全文按钮。</p>
-</li>
-<li><p>如果需要自动设置显示阅读全文功能，在主题文件下的_config.yml里面新增如下代码：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 配置文章字数多于100字后显示阅读全文</span></div><div class="line"><span class="attr">auto_excerpt:</span></div><div class="line"><span class="attr">  enable:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  length:</span> <span class="number">100</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>发布博客使用如下命令即可：</p>
+<h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3><p>发布博客使用如下命令即可：</p>
 <ul>
 <li><code>$ hexo clean</code>    该命令用于清除pulic文件夹缓存，可以忽略</li>
 <li><code>$ hexo generate</code>  该命令用户生成静态页面，可以简写为 <code>$ hexo g</code></li>
 <li>如果需要现在本地预览则使用<code>$ hexo server</code>或者可以简写为<code>$ hexo s</code>，然后运行 <code>http://localhost:4000/</code>即可预览。</li>
 <li><code>$ hexo deploy</code>   该命令将本地文件部署到github上，可以简写为<code>$ hexo d</code></li>
 </ul>
-</li>
+<ul>
 <li><p>如果需要文章禁止评论，则在页面的 Front-matter 里添加<code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示：</p>
 <blockquote>
 <p>title: tags<br>date: 2017-02-06 13:37:19<br>type: tags<br>comments: false</p>
 </blockquote>
 </li>
 </ul>
+<h3 id="设置阅读全文"><a href="#设置阅读全文" class="headerlink" title="设置阅读全文"></a>设置阅读全文</h3><ul>
+<li><p>手动设置</p>
+<p>如果需要手动实现阅读全文功能，则在需要显示阅读全文按钮的地方添加<code>&lt;!--more--&gt;</code>，则文章会从此处截断，显示阅读全文按钮。</p>
+</li>
+<li><p>自动形成摘要</p>
+<p>在主题文件下的_config.yml里面新增如下代码：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 配置文章字数多于100字后显示阅读全文</span></div><div class="line"><span class="attr">auto_excerpt:</span></div><div class="line"><span class="attr">  enable:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  length:</span> <span class="number">100</span></div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<hr>
+<h3 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h3><ol>
+<li><a href="http://theme-next.iissnan.com/faqs.html" target="_blank" rel="external">NextT相关设置</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo的相关设置</a></li>
+</ol>
 
       
     </div>
@@ -517,6 +512,12 @@ title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
       
 
       
@@ -601,8 +602,17 @@ title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/logo.jpg"
@@ -678,6 +688,22 @@ title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建博客"><span class="nav-number">1.</span> <span class="nav-text">新建博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为博客添加标签以及分类"><span class="nav-number">2.</span> <span class="nav-text">为博客添加标签以及分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布博客"><span class="nav-number">3.</span> <span class="nav-text">发布博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置阅读全文"><span class="nav-number">4.</span> <span class="nav-text">设置阅读全文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接："><span class="nav-number">5.</span> <span class="nav-text">参考链接：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
