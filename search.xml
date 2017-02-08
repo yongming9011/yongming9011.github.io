@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[test]]></title>
+      <url>%2F2017%2F02%2F08%2Ftest%2F</url>
+      <content type="text"><![CDATA[最近公司项目上需要用到分享跟第三方登录，由于友盟集成的社会化分享在国内的口碑还挺不错的，所以就集成进项目了，经历了各种坑之后，基本上算是告一段落了，现在把遇到的各种坑记录下来，希望能帮到一些遇到相同问题的猿友。 坑1：QQ第三方登录的坑 QQ第三方登录需要你在腾讯开放平台申请一个AppID及Appkey ，然后才能使用，由于同一个app使用不同的签名文件生成的AppID及Appkey是不一样的，如果你给腾讯那边上传的是一个debug版的apk，那么这个AppID及Appkey就是debug版的，然后你的第三方登录只有在使用dubug版的时候才能用，在正式包下会提示错误：应用不是最新的（100044）这个错误，所以这一点一定要注意，如果你给腾讯上传的是一个release版的apk，那么你以后的每次调试QQ登录都得用release的签名打包，我的做法是，调试的时候直接用release版的签名编译，具体参考：[http://m.blog.csdn.net/article/details?id=51181993](http://m.blog.csdn.net/article/details?id=51181993)这篇文章的做法 QQ的第二个坑，QQ的接口返回的唯一码是一个叫openId的东东，其实我一直不明白它为什么不返回一个QQ号啊，因为这个东西不管在哪个平台都是唯一的，算了，不扯这些了，既然人家不给返回QQ号码自然有人家的想法，也许是为了用户隐私之类的。现在就说说这个openId，据我的理解，应该是与应用的appId还有应用的签名有关（个人理解，如有错误还望指正），所以不同的应用返回的openId是不一样的，在这里我就遇到坑了，因为我们公司[iOS](http://lib.csdn.net/base/ios)开发的比[Android](http://lib.csdn.net/base/android)早半年，所以当初ios自己用自己的账号申请了一个ios的AppID及Appkey，现在Android这边我用公司的账号在应用宝上架的app，所以同一个QQ账号的第三方登录在ios跟Android返回的openId都不一样，经过咨询腾讯客服（QQ：800013811），告诉我只有一个办法解决，那就是把一方的应用转让给另一方，保证ios的跟Android的都在一个开发者账号下，然后再申请数据互通。。。。只有这样，才能保证相同的QQ号在两个平台的openId才能一致。 坑2：新浪微博的坑 新浪这个就比较坑了，由于我用的是Android Studio，我直接将新浪的sdk里的libs下的那些so文件夹直接拷贝到我的libs里面，原以为这样就好了（貌似在ADT下确实就好了），结果运行各种闪退，日志也没啥特殊的地方，死活不知道原因，最后纠结了两天，想着可能是so文件的原因，就百度了下Android Studio如何导入so文件，按照操作执行了之后，瞬间就好了，简直汗颜。关于在Android Studio下如何导入so文件请参考：[http://www.cnblogs.com/xrwang/p/AndroidStudioImportJarAndSoLibrary.html](http://www.cnblogs.com/xrwang/p/AndroidStudioImportJarAndSoLibrary.html) 或者 [http://zhidao.baidu.com/link?url=NpUDtNKS-1zmRPdLnjK5_uBeNwriwXfRG-PwyCga3P3HelOEiUDXwGvdet1amk3_OgRZkwpCLzDSNMniiEtwZExkcTDPsk9St0rr8cPjCK3](http://zhidao.baidu.com/link?url=NpUDtNKS-1zmRPdLnjK5_uBeNwriwXfRG-PwyCga3P3HelOEiUDXwGvdet1amk3_OgRZkwpCLzDSNMniiEtwZExkcTDPsk9St0rr8cPjCK3)]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[博客使用方法]]></title>
       <url>%2F2017%2F02%2F07%2F%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
       <content type="text"><![CDATA[新建博客 $ hexo new 博客名 比如，新建一个名为“博客使用方法”的博客： $ hexo new 博客使用方法 为博客添加标签以及分类 打开/hexo/source/_posts文件夹，找到刚才新建的博客并打开 修改开头内容 title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧 其中：tags即为文章的标签，可以不写，如果要添加多个标签则使用如下格式： tags:[博客,使用,方法] 每个标签后的逗号必须是英文逗号。 categories即为文章的分类 如果需要手动实现阅读全文功能，则在需要显示阅读全文按钮的地方添加&lt;!--more--&gt;，则文章会从此处截断，显示阅读全文按钮。 如果需要自动设置显示阅读全文功能，在主题文件下的_config.yml里面新增如下代码： 1234# 配置文章字数多于100字后显示阅读全文auto_excerpt: enable: true length: 100 发布博客使用如下命令即可： $ hexo clean 该命令用于清除缓存，可以忽略 $ hexo generate 该命令用户生成静态页面，可以简写为 $ hexo g 如果需要现在本地预览则使用$ hexo server或者可以简写为$ hexo s，然后运行 http://localhost:4000/即可预览。 $ hexo deploy 该命令将本地文件部署到github上，可以简写为$ hexo d]]></content>
@@ -125,6 +132,13 @@
       <title><![CDATA[如何去掉Android Studio的注释警告]]></title>
       <url>%2F2016%2F08%2F11%2F%E5%A6%82%E4%BD%95%E5%8E%BB%E6%8E%89Android-Studio%E7%9A%84%E6%B3%A8%E9%87%8A%E8%AD%A6%E5%91%8A%2F</url>
       <content type="text"><![CDATA[我们知道，使用Android Studio（以下简称AS）如果给一个方法添加文档注释时，方法里的参数也必须添加注释，否则会有警告。如下： 其实给参数添加注释是个很好的习惯，但是如果是重写的或者实现接口的抽象方法，有时候我们不需要给参数加注释，然而AS会报警告，右侧会有黄色的横条，这些警告跟代码警告混在一起，很影响阅读，所以有时候我们需要去掉。 具体步骤：File-&gt;Settings-&gt;Editor-&gt;Inspections,在右侧找到Javadoc issues下的Declaration has Javadoc problems右侧的勾去掉然后点击Apply或者OK即可。 然后就可以看到效果了。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[hexo问题汇总]]></title>
+      <url>%2F2016%2F02%2F08%2Fhexo%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%2F</url>
+      <content type="text"><![CDATA[搜索功能不可用或点击搜索不弹出搜索框 首先检查hexo文件夹下的_config.yml文件是否包含以下配置： 12345search: path: search.xml field: post format: html limit: 10000 如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入http://zhangym.me/search.xml即博客网址后添加/search.xml看看是否能正常访问，若该xml文件报错，则说明某一篇文章的内容有乱码或者其他字符导致生成的search.xml不是标准的xml文件，导致搜索功能不可用，此时只需根据对应的提示，用代码编辑器打开/hexo/public/search.xml，去问题所在的行查看并修改问题即可。修改完毕再次使用http://zhangym.me/search.xml检查，如果正常，搜索功能应该就好了。]]></content>
     </entry>
 
     
