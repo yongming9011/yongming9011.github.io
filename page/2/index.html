@@ -397,7 +397,7 @@
         
           
           关于Android6.0，在申请权限的时有以下需要注意的地方：
-若用户勾选了不再提示的选择框之后，是不会再弹出系统的权限申请提示框，这就麻烦了，此时我们需要提示用户去设置里为app开启相应的权限。具体
+若用户勾选了不再提示的选择框之后，是不会再弹出系统的权限申请提示框，这就麻烦了，此时我们需要提示用户去设置里为app开启相应的权限。具体做法：在onRequestPermissionsResult()方法中判断用户拒绝权限后should
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -558,7 +558,7 @@
 just(T...):将传入的参数依次发送出来,快捷创建创建事件队列的方法
 1Observable.just("hello","world”);
 等同于
-12345678Ob
+12345678Observable observable = Observable.create(new Observ
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -715,7 +715,7 @@ just(T...):将传入的参数依次发送出来,快捷创建创建事件队列�
       
         
           
-          回调在Java中运用的相当广泛，类似Android中的控件点击监听事件setOnClickListener()方法就是典型的回调。回调是什么？关于回调的定义通俗地说就是：A类调用B类中的某个方法，然后
+          回调在Java中运用的相当广泛，类似Android中的控件点击监听事件setOnClickListener()方法就是典型的回调。回调是什么？关于回调的定义通俗地说就是：A类调用B类中的某个方法，然后B类中反过来调用A类中的方法D,D这个方法就叫做回调方法。在Java中回调的这个方法D一般是接口中定
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -885,7 +885,7 @@ just(T...):将传入的参数依次发送出来,快捷创建创建事件队列�
 
 
 
-第1部分是为这个
+第1部分是为这个过滤器输入名称，第2部分是一些过滤信息的配置：Log Tag 是根据log.d(&quot;XXX&
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1045,7 +1045,9 @@ just(T...):将传入的参数依次发送出来,快捷创建创建事件队列�
           Dryrun是GitHub上的一个开源工具，它最强大的地方在于可以只用一行命令行即可让你运行GitHub上的项目，是不是很激动？
 通常我们需要预览GitHub上的开源项目一般会做以下几步：
 
-找到这个
+找到这个项目
+点击项目右侧的 Clone or download下载整个项目资源
+解压缩下载下来的zip文件
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1202,7 +1204,7 @@ just(T...):将传入的参数依次发送出来,快捷创建创建事件队列�
       
         
           
-          12345678&#123;      "font_face": "Courier New",      "font_size": 14.0,      "update_check": false, 
+          12345678&#123;      "font_face": "Courier New",      "font_size": 14.0,      "update_check": false,      "open_files_in_new_window": false,      "hot_
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1360,7 +1362,7 @@ just(T...):将传入的参数依次发送出来,快捷创建创建事件队列�
         
           
           我们一般写menu文件时会有如下写法：
-1234567&lt;?xml version="1.0" encoding="utf-8"?&gt;  &lt;menu xmlns:android="htt
+1234567&lt;?xml version="1.0" encoding="utf-8"?&gt;  &lt;menu xmlns:android="http://schemas.android.com/apk/res/android"&gt;      
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1518,7 +1520,8 @@ just(T...):将传入的参数依次发送出来,快捷创建创建事件队列�
         
           
           友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。
-然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友
+然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
+12// 友盟统计的sdk  compile 'com.umeng.analytic
           ...
           <!--noindex-->
           <div class="post-button text-center">
