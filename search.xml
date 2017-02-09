@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Android获取发布版签名文件的指纹]]></title>
       <url>%2F2017%2F02%2F09%2FAndroid%E8%8E%B7%E5%8F%96%E5%8F%91%E5%B8%83%E7%89%88%E7%AD%BE%E5%90%8D%E6%96%87%E4%BB%B6%E7%9A%84%E6%8C%87%E7%BA%B9%2F</url>
-      <content type="text"><![CDATA[有时候申请一些第三方sdk时，比如百度地图的sdk，需要获取正式版签名文件的指纹，关于如何获取，在命令窗口输入以下命令即可： 1$ keytool -list -v -keystore /Users/zhangyongming/Desktop/Project/ezhenduankey.jks 即keytool -list -v -keystore &lt;文件路径&gt;即可，然后复制签名信息里的SHA1的值就行。]]></content>
+      <content type="text"><![CDATA[有时候申请一些第三方sdk时，比如百度地图的sdk，需要获取正式版签名文件的指纹，关于如何获取，在命令窗口输入以下命令即可： 1$ keytool -list -v -keystore /Users/zhangyongming/Desktop/Project/ezhenduankey.jks 即keytool -list -v -keystore &lt;文件路径&gt;即可，然后会得到类似如下这样的信息： 复制签名信息里的SHA1的值就行。]]></content>
     </entry>
 
     
