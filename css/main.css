@@ -1801,7 +1801,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0385ff;
+  background: #4effc2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2649,7 +2649,7 @@ a.search-result {
   float: right;
   box-sizing: border-box;
   padding: 40px;
-  width: calc(100% - 300px);
+  width: calc(100% - 260px);
   background: #fff;
   min-height: 700px;
   box-shadow: initial;
