@@ -10,20 +10,6 @@
 
     
     <entry>
-      <title><![CDATA[博客使用方法]]></title>
-      <url>%2F2017%2F02%2F07%2F%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[新建博客$ hexo new 博客名 比如，新建一个名为“博客使用方法”的博客： $ hexo new 博客使用方法 为博客添加标签以及分类 打开/hexo/source/_posts文件夹，找到刚才新建的博客并打开 修改开头内容 title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧 其中：tags即为文章的标签，可以不写，如果要添加多个标签则使用如下格式： tags:[博客,使用,方法] 每个标签后的逗号必须是英文逗号“,”，categories即为文章的分类。 发布博客发布博客使用如下命令即可： $ hexo clean 该命令用于清除pulic文件夹缓存，可以忽略 $ hexo generate 该命令用于生成静态页面，可以简写为 $ hexo g 如果需要先在本地预览则使用$ hexo server（可以简写为$ hexo s），然后运行 http://localhost:4000/即可预览。 $ hexo deploy 该命令将本地文件部署到github上，可以简写为$ hexo d 如果需要文章禁止评论，则在页面的 Front-matter 里添加comments 字段，并将值设置为 false。如下所示： title: tagsdate: 2017-02-06 13:37:19type: tagscomments: false 设置阅读全文 手动设置 如果需要手动实现阅读全文功能，则在需要显示阅读全文按钮的地方添加&lt;!--more--&gt;，则文章会从此处截断，显示阅读全文按钮。 自动形成摘要 在主题文件下的_config.yml里面新增如下代码： 1234# 配置文章字数多于100字后显示阅读全文auto_excerpt: enable: true length: 100 ​ 参考链接： NextT相关设置 Hexo的相关设置]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[博客搬家]]></title>
-      <url>%2F2017%2F01%2F20%2F%E5%8D%9A%E5%AE%A2%E6%90%AC%E5%AE%B6%2F</url>
-      <content type="text"><![CDATA[​ 原来一直在CSDN上写博客，不知道是自己不会用还是怎么的，老感觉CSDN的排版很麻烦而且很不人性化。后来被简书的简洁唯美风格所吸引，曾经一度想转移到简书，但是感觉简书上太杂乱，什么内容的文章都有，最近才听说有个叫GitHub Pages的神器，于是乎果断尝试，简直是相见恨晚啊。所以，以后的个人博客都将迁移到此处。 ​ 注：原CSDN博客地址：http://blog.csdn.net/zhangym90]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[Android使用Handler的postDelayed(Runnable, long)方法实现定时任务]]></title>
       <url>%2F2017%2F01%2F17%2FAndroid%E4%BD%BF%E7%94%A8Handler%E7%9A%84postDelayed-Runnable-long-%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%2F</url>
       <content type="text"><![CDATA[近期由于公司领导需要将公众号的运营数据放到公司的50寸的微鲸智能电视机上播放，所以一开始是找设计作图，设计问后台要数据，然后做成图片放到电视机上。但是数据是不断更新的，所以设计作图也做的很郁闷。所以我也就顺手做了个app用来展示，顺便解放了设计。当然，功能很简单，就一个界面，背景图是设计原先做的图，然后他将数据扣掉，我在需要添加数据的地方添加几个TextView，然后后台给我一个接口，我这边联网获取数据，每分钟更新一次。 好了，废话说了那么多了，现在主要说说如何实现每分钟更新一次吧，首先创建Handler对象： 1private Handler mHandler = new Handler(); 然后是Runnable，在Runnable的run()方法中调用mHandler.postDelayed(this,60000)，实现每隔1分钟执行一次。 12345678Runnable runnable = new Runnable() &#123; @Override public void run() &#123; showData(); // 循环调用实现定时刷新界面 mHandler.postDelayed(this, 60000); &#125; &#125;; 然后启动定时器即可： 1mHandler.postDelayed(runnable, 1000);]]></content>
@@ -139,6 +125,13 @@
       <title><![CDATA[hexo问题汇总]]></title>
       <url>%2F2016%2F02%2F08%2Fhexo%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%2F</url>
       <content type="text"><![CDATA[搜索功能不可用或点击搜索不弹出搜索框首先检查hexo文件夹下的_config.yml文件是否包含以下配置： 12345search: path: search.xml field: post format: html limit: 10000 如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入http://zhangym.me/search.xml即博客网址后添加/search.xml看看是否能正常访问，若该xml文件打开出来类似如下错误： 说明某一篇文章的内容有乱码或者其他字符导致生成的search.xml不是标准的xml文件，导致搜索功能不可用，此时只需根据对应的提示，用代码编辑器打开/hexo/public/search.xml，去问题所在的行查看并修改问题即可。修改完毕再次使用http://zhangym.me/search.xml检查，如果正常，搜索功能应该就好了。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[博客使用方法]]></title>
+      <url>%2F2016%2F01%2F01%2F%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[新建博客$ hexo new 博客名 比如，新建一个名为“博客使用方法”的博客： $ hexo new 博客使用方法 为博客添加标签以及分类 打开/hexo/source/_posts文件夹，找到刚才新建的博客并打开 修改开头内容 title: 博客使用方法date: 2017-02-07 15:18:03tags:categories: 技巧 其中：tags即为文章的标签，可以不写，如果要添加多个标签则使用如下格式： tags:[博客,使用,方法] 每个标签后的逗号必须是英文逗号“,”，categories即为文章的分类。 发布博客发布博客使用如下命令即可： $ hexo clean 该命令用于清除pulic文件夹缓存，可以忽略 $ hexo generate 该命令用于生成静态页面，可以简写为 $ hexo g 如果需要先在本地预览则使用$ hexo server（可以简写为$ hexo s），然后运行 http://localhost:4000/即可预览。 $ hexo deploy 该命令将本地文件部署到github上，可以简写为$ hexo d 如果需要文章禁止评论，则在页面的 Front-matter 里添加comments 字段，并将值设置为 false。如下所示： title: tagsdate: 2017-02-06 13:37:19type: tagscomments: false 设置阅读全文 手动设置 如果需要手动实现阅读全文功能，则在需要显示阅读全文按钮的地方添加&lt;!--more--&gt;，则文章会从此处截断，显示阅读全文按钮。 自动形成摘要 在主题文件下的_config.yml里面新增如下代码： 1234# 配置文章字数多于100字后显示阅读全文auto_excerpt: enable: true length: 100 ​ 参考链接： NextT相关设置 Hexo的相关设置]]></content>
     </entry>
 
     
