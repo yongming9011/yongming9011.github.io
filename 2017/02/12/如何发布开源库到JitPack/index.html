@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android,友盟,酷传,多渠道打包,统计," />
+  <meta name="keywords" content="JitPack," />
 
 
 
@@ -84,30 +84,32 @@
 
 
 
-<meta name="description" content="友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。
-然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
-12// 友盟统计的sdk  compile &apos;com.umeng.analytics:analytics:latest.integration&apos;
-然后在AndroidManifest">
+<meta name="description" content="貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：
+发布开源库
+首先用Andr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="友盟统计sdk集成及多渠道打包">
-<meta property="og:url" content="https://yongming9011.github.io/2016/10/13/友盟统计sdk集成及多渠道打包/index.html">
+<meta property="og:title" content="如何发布开源库到JitPack">
+<meta property="og:url" content="https://yongming9011.github.io/2017/02/12/如何发布开源库到JitPack/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
-<meta property="og:description" content="友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。
-然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
-12// 友盟统计的sdk  compile &apos;com.umeng.analytics:analytics:latest.integration&apos;
-然后在AndroidManifest">
-<meta property="og:image" content="http://img.blog.csdn.net/20161215103830603?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20161215104534551?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20161215105845704?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20161215110025867?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-02-07T13:54:17.000Z">
+<meta property="og:description" content="貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：
+发布开源库
+首先用Andr">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-104341@2x.jpg">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-105202@2x.jpg">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-111359@2x.jpg">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-111827@2x.jpg">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-112206@2x.jpg">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-112356@2x.jpg">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-112928@2x.jpg">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-113042@2x.jpg">
+<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-113226@2x.jpg">
+<meta property="og:updated_time" content="2017-02-13T03:40:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="友盟统计sdk集成及多渠道打包">
-<meta name="twitter:description" content="友盟统计sdk集成其实很简单，先去友盟官网新建应用，然后会得到一个Appkey。
-然后根据友盟的sdk集成文档在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：
-12// 友盟统计的sdk  compile &apos;com.umeng.analytics:analytics:latest.integration&apos;
-然后在AndroidManifest">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20161215103830603?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:title" content="如何发布开源库到JitPack">
+<meta name="twitter:description" content="貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：
+发布开源库
+首先用Andr">
+<meta name="twitter:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-104341@2x.jpg">
 
 
 
@@ -135,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https://yongming9011.github.io/2016/10/13/友盟统计sdk集成及多渠道打包/"/>
+  <link rel="canonical" href="https://yongming9011.github.io/2017/02/12/如何发布开源库到JitPack/"/>
 
 
 
 
 
-  <title> 友盟统计sdk集成及多渠道打包 | 从百草园到三味书屋 </title>
+  <title> 如何发布开源库到JitPack | 从百草园到三味书屋 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -297,7 +299,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://yongming9011.github.io/2016/10/13/友盟统计sdk集成及多渠道打包/">
+  <link itemprop="mainEntityOfPage" href="https://yongming9011.github.io/2017/02/12/如何发布开源库到JitPack/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="张永明">
@@ -321,7 +323,7 @@
             
             
               
-                友盟统计sdk集成及多渠道打包
+                如何发布开源库到JitPack
               
             
           </h2>
@@ -336,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-13T15:19:00+08:00">
-                2016-10-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-12T21:10:13+08:00">
+                2017-02-12
               </time>
             
 
@@ -359,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Android笔记</span>
+                  <a href="/categories/工欲善其事必先利其器/" itemprop="url" rel="index">
+                    <span itemprop="name">工欲善其事必先利其器</span>
                   </a>
                 </span>
 
@@ -377,8 +379,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/10/13/友盟统计sdk集成及多渠道打包/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/13/友盟统计sdk集成及多渠道打包/" itemprop="commentCount"></span>
+                <a href="/2017/02/12/如何发布开源库到JitPack/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/12/如何发布开源库到JitPack/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -409,24 +411,56 @@
       
 
       
-        <p>友盟统计sdk集成其实很简单，先去<a href="http://mobile.umeng.com/apps" target="_blank" rel="external">友盟官网</a>新建应用，然后会得到一个Appkey。</p>
-<p>然后根据友盟的<a href="http://dev.umeng.com/analytics/android-doc/integration" target="_blank" rel="external">sdk集成文档</a>在Android Studio的app目录下的build.gradle添加如下代码，集成友盟统计sdk：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 友盟统计的sdk  </span></div><div class="line">compile <span class="string">'com.umeng.analytics:analytics:latest.integration'</span></div></pre></td></tr></table></figure>
-<p>然后在AndroidManifest.xml的Application标签下配置</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 友盟appid --&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">meta-data</span>  </span></div><div class="line">	<span class="attr">android:name</span>=<span class="string">"UMENG_APPKEY"</span>  </div><div class="line">	<span class="attr">android:value</span>=<span class="string">"XXX"</span>&gt;  </div><div class="line"><span class="tag">&lt;/<span class="name">meta-data</span>&gt;</span>  </div><div class="line"><span class="comment">&lt;!--此处配置是为了方便酷传多渠道打包 --&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:value</span>=<span class="string">""</span> <span class="attr">android:name</span>=<span class="string">"UMENG_CHANNEL"</span>/&gt;</span></div></pre></td></tr></table></figure>
-<p>其中XXX为你自己的Appkey，UMENG_CHANNEL的值为空字符串主要是为了使用酷传的多渠道打包。然后找到程序的入口Activity，即AndroidManifest.xml里配置了如下代码的Activity</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">".MainActivity"</span>&gt;</span>  </div><div class="line">	<span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span>  </div><div class="line">		<span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.MAIN"</span>/&gt;</span>  </div><div class="line">  </div><div class="line">		<span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.LAUNCHER"</span>/&gt;</span>  </div><div class="line">	<span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>在该Activity的onResum()跟onPause()方法里添加如下代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span>  </div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span> </span>&#123;  </div><div class="line">	<span class="keyword">super</span>.onResume();  </div><div class="line">	MobclickAgent.onResume(<span class="keyword">this</span>);  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="meta">@Override</span>  </div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPause</span><span class="params">()</span> </span>&#123;  </div><div class="line">	<span class="keyword">super</span>.onPause();  </div><div class="line">	MobclickAgent.onPause(<span class="keyword">this</span>);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>至此，友盟统计的基本功能已经集成完毕。然后就是使用酷传进行多渠道打包了，先在<a href="http://www.coolchuan.com/client" target="_blank" rel="external">酷传官网</a>下载酷传的软件，然后申请账号，打开软件并登录</p>
-<p><img src="http://img.blog.csdn.net/20161215103830603?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="酷传"></p>
-<p>选择 上方的 <strong>工具箱 </strong>，打开如下界面</p>
-<p><img src="http://img.blog.csdn.net/20161215104534551?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>选择  生成多渠道包，然后选择需要多渠道打包的apk文件</p>
-<p><img src="http://img.blog.csdn.net/20161215105845704?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>点击下一步，在弹出的渠道包签名对话框中选择相应的release版的keystore文件，并填写相应的信息</p>
-<p><img src="http://img.blog.csdn.net/20161215110025867?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmd5bTkw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>然后点击生成渠道包，就会出现生成渠道包的界面，完成后会在原始的apk文件所在的目录生成一个叫做 酷传智能分包 的文件夹，里面就是生成的多渠道包。</p>
+        <p>貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：</p>
+<h3 id="发布开源库"><a href="#发布开源库" class="headerlink" title="发布开源库"></a>发布开源库</h3><ol>
+<li><p>首先用Android Studio新建一个工程，然后添加需要发布的module。这里需要注意的是，项目的名字必须是你想发布的开源库的名字,module的名字可以随意。这个与JCenter刚好相反，JitPack上显示的是项目的名字，所以项目的名字一定要起好。</p>
+<p><img src="/Users/zhangyongming/Desktop/QQ20170213-104341@2x.jpg" alt=""></p>
+</li>
+<li><p>在项目的<code>build.gradle</code>的dependencies下添加如下代码：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">classpath <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.5'</span></div></pre></td></tr></table></figure>
+<p>这里的插件版本一定要是最新的，不然可能会出现各种奇怪的问题，如果想知道最新的版本号是多少，可以去<a href="https://github.com/dcendents/android-maven-gradle-plugin" target="_blank" rel="external">这里</a>查看。添加完后，应该是这样的：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath <span class="string">'com.android.tools.build:gradle:2.2.3'</span></div><div class="line">        classpath <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.5'</span></div><div class="line">        <span class="comment">// <span class="doctag">NOTE:</span> Do not place your application dependencies here; they belong</span></div><div class="line">        <span class="comment">// in the individual module build.gradle files</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">task clean(<span class="string">type:</span> Delete) &#123;</div><div class="line">    delete rootProject.buildDir</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后根据提示进行Sync或者点击<img src="/Users/zhangyongming/Desktop/QQ20170213-105202@2x.jpg" alt="">图标进行同步。</p>
+</li>
+<li><p>在需要发布的module里的build.gradle里的<code>apply plugin: &#39;com.android.library&#39;</code>添加如下两句：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.github.dcendents.android-maven'</span></div><div class="line">group=<span class="string">'com.github.yongming9011'</span></div></pre></td></tr></table></figure>
+<p>把<code>com.github.yongming9011</code>里的<code>yongming9011</code>改成自己的用户名，添加完后是这样的：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.android.library'</span></div><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.github.dcendents.android-maven'</span></div><div class="line">group=<span class="string">'com.github.yongming9011'</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>然后将项目发布到github，Android Studio提供了一键发布：<code>VCS--&gt;Import into Version Control--&gt;Share Project on GitHub</code>，然后输入用户名跟密码就可以一键发布。</p>
+<p><img src="/Users/zhangyongming/Desktop/QQ20170213-111359@2x.jpg" alt=""></p>
+</li>
+<li><p>给项目添加Tag，登录GitHub，打开刚才上传的项目，点击release：</p>
+<p><img src="/Users/zhangyongming/Desktop/QQ20170213-111827@2x.jpg" alt=""></p>
+<p>如下：</p>
+<p><img src="/Users/zhangyongming/Desktop/QQ20170213-112206@2x.jpg" alt=""></p>
+<p>新建一个tag，输入版本号跟标题：</p>
+<p><img src="/Users/zhangyongming/Desktop/QQ20170213-112356@2x.jpg" alt=""></p>
+<p>然后点击<code>Publish</code>保存。</p>
+</li>
+<li><p>现在开源库就发布成功了，就这么简单！！！</p>
+</li>
+</ol>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><ol>
+<li><p>打开<a href="https://jitpack.io/" target="_blank" rel="external">JitPack</a>，然后将开源库的github地址复制填进去：</p>
+<p><img src="/Users/zhangyongming/Desktop/QQ20170213-112928@2x.jpg" alt=""></p>
+<p>然后点击<code>Look up</code>。然后就可以看到我们刚才添加的tag</p>
+<p><img src="/Users/zhangyongming/Desktop/QQ20170213-113042@2x.jpg" alt=""></p>
+<p>点击<code>Get it</code>，然后页面会移动到使用教程的地方</p>
+<p><img src="/Users/zhangyongming/Desktop/QQ20170213-113226@2x.jpg" alt=""></p>
+</li>
+<li><p>关于如何使用，网站上已经说的很清楚了：</p>
+<ul>
+<li><p>第一步：在项目的根目录的<code>build.gradle</code>下的allprojects下添加<code>maven { url &#39;https://jitpack.io&#39; }</code></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">        maven &#123; url <span class="string">'https://jitpack.io'</span> &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>第二步：在项目的app下的build.gradle的dependencies下添加依赖<code>compile &#39;com.github.yongming9011:VerificationCodeView:v1.0&#39;</code></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">    compile fileTree(<span class="string">include:</span> [<span class="string">'*.jar'</span>], <span class="string">dir:</span> <span class="string">'libs'</span>)</div><div class="line">    androidTestCompile(<span class="string">'com.android.support.test.espresso:espresso-core:2.2.2'</span>, &#123;</div><div class="line">        exclude <span class="string">group:</span> <span class="string">'com.android.support'</span>, <span class="string">module:</span> <span class="string">'support-annotations'</span></div><div class="line">    &#125;)</div><div class="line">    compile <span class="string">'com.android.support:appcompat-v7:25.1.0'</span></div><div class="line">    compile <span class="string">'com.github.yongming9011:VerificationCodeView:v1.0'</span></div><div class="line">    testCompile <span class="string">'junit:junit:4.12'</span></div><div class="line">    compile project(<span class="string">':library'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以上两步，缺一不可。</p>
+</li>
+</ol>
 
       
     </div>
@@ -471,15 +505,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
-          
-            <a href="/tags/友盟/" rel="tag"># 友盟</a>
-          
-            <a href="/tags/酷传/" rel="tag"># 酷传</a>
-          
-            <a href="/tags/多渠道打包/" rel="tag"># 多渠道打包</a>
-          
-            <a href="/tags/统计/" rel="tag"># 统计</a>
+            <a href="/tags/JitPack/" rel="tag"># JitPack</a>
           
         </div>
       
@@ -488,8 +514,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/26/记录友盟分享，第三方登录遇到的坑/" rel="next" title="记录友盟分享，第三方登录遇到的坑">
-                <i class="fa fa-chevron-left"></i> 记录友盟分享，第三方登录遇到的坑
+              <a href="/2017/02/09/Android获取发布版签名文件的指纹/" rel="next" title="Android获取发布版签名文件的指纹">
+                <i class="fa fa-chevron-left"></i> Android获取发布版签名文件的指纹
               </a>
             
           </div>
@@ -497,10 +523,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/27/关于toolbar菜单设置了always后不显示的问题/" rel="prev" title="关于toolbar菜单设置了always后不显示的问题">
-                关于toolbar菜单设置了always后不显示的问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -515,10 +537,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/10/13/友盟统计sdk集成及多渠道打包/"
-     data-title="友盟统计sdk集成及多渠道打包"
+        <div class="ds-share flat" data-thread-key="2017/02/12/如何发布开源库到JitPack/"
+     data-title="如何发布开源库到JitPack"
      data-content=""
-     data-url="https://yongming9011.github.io/2016/10/13/友盟统计sdk集成及多渠道打包/">
+     data-url="https://yongming9011.github.io/2017/02/12/如何发布开源库到JitPack/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -545,8 +567,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/13/友盟统计sdk集成及多渠道打包/"
-           data-title="友盟统计sdk集成及多渠道打包" data-url="https://yongming9011.github.io/2016/10/13/友盟统计sdk集成及多渠道打包/">
+      <div class="ds-thread" data-thread-key="2017/02/12/如何发布开源库到JitPack/"
+           data-title="如何发布开源库到JitPack" data-url="https://yongming9011.github.io/2017/02/12/如何发布开源库到JitPack/">
       </div>
     
   </div>
@@ -570,8 +592,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/logo.jpg"
@@ -647,6 +678,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#发布开源库"><span class="nav-number">1.</span> <span class="nav-text">发布开源库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用"><span class="nav-number">2.</span> <span class="nav-text">如何使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
