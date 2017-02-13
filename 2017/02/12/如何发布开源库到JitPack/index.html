@@ -94,22 +94,22 @@
 <meta property="og:description" content="貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：
 发布开源库
 首先用Andr">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-104341@2x.jpg">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-105202@2x.jpg">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-111359@2x.jpg">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-111827@2x.jpg">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-112206@2x.jpg">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-112356@2x.jpg">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-112928@2x.jpg">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-113042@2x.jpg">
-<meta property="og:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-113226@2x.jpg">
-<meta property="og:updated_time" content="2017-02-13T03:42:27.000Z">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop18wtegj30jm0mitan.jpg">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop16l34fj301w01mmx1.jpg">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop1pxb7nj30xy0n00x3.jpg">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fcop15tovjj31io0lcgqv.jpg">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop0zymj9j315g0kstb4.jpg">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fcop1rorcij314w0ji0uh.jpg">
+<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcly1fcop1mn4hyj315w0ait9o.jpg">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop1aapg0j30xw0cq751.jpg">
+<meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcly1fcop1whi2rj318y0tgn11.jpg">
+<meta property="og:updated_time" content="2017-02-13T03:45:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何发布开源库到JitPack">
 <meta name="twitter:description" content="貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：
 发布开源库
 首先用Andr">
-<meta name="twitter:image" content="https://yongming9011.github.io/Users/zhangyongming/Desktop/QQ20170213-104341@2x.jpg">
+<meta name="twitter:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop18wtegj30jm0mitan.jpg">
 
 
 
@@ -414,13 +414,13 @@
         <p>貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：</p>
 <h3 id="发布开源库"><a href="#发布开源库" class="headerlink" title="发布开源库"></a>发布开源库</h3><ol>
 <li><p>首先用Android Studio新建一个工程，然后添加需要发布的module。这里需要注意的是，项目的名字必须是你想发布的开源库的名字,module的名字可以随意。这个与JCenter刚好相反，JitPack上显示的是项目的名字，所以项目的名字一定要起好。</p>
-<p><img src="/Users/zhangyongming/Desktop/QQ20170213-104341@2x.jpg" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcly1fcop18wtegj30jm0mitan.jpg" alt=""></p>
 </li>
 <li><p>在项目的<code>build.gradle</code>的dependencies下添加如下代码：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">classpath <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.5'</span></div></pre></td></tr></table></figure>
 <p>这里的插件版本一定要是最新的，不然可能会出现各种奇怪的问题，如果想知道最新的版本号是多少，可以去<a href="https://github.com/dcendents/android-maven-gradle-plugin" target="_blank" rel="external">这里</a>查看。添加完后，应该是这样的：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath <span class="string">'com.android.tools.build:gradle:2.2.3'</span></div><div class="line">        classpath <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.5'</span></div><div class="line">        <span class="comment">// <span class="doctag">NOTE:</span> Do not place your application dependencies here; they belong</span></div><div class="line">        <span class="comment">// in the individual module build.gradle files</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">task clean(<span class="string">type:</span> Delete) &#123;</div><div class="line">    delete rootProject.buildDir</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>然后根据提示进行Sync或者点击<img src="/Users/zhangyongming/Desktop/QQ20170213-105202@2x.jpg" alt="">图标进行同步。</p>
+<p>然后根据提示进行Sync或者点击<img src="https://ww3.sinaimg.cn/large/006tKfTcly1fcop16l34fj301w01mmx1.jpg" alt="">图标进行同步。</p>
 </li>
 <li><p>在需要发布的module里的build.gradle里的<code>apply plugin: &#39;com.android.library&#39;</code>添加如下两句：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.github.dcendents.android-maven'</span></div><div class="line">group=<span class="string">'com.github.yongming9011'</span></div></pre></td></tr></table></figure>
@@ -428,14 +428,14 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.android.library'</span></div><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.github.dcendents.android-maven'</span></div><div class="line">group=<span class="string">'com.github.yongming9011'</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>然后将项目发布到github，Android Studio提供了一键发布：<code>VCS--&gt;Import into Version Control--&gt;Share Project on GitHub</code>，然后输入用户名跟密码就可以一键发布。</p>
-<p><img src="/Users/zhangyongming/Desktop/QQ20170213-111359@2x.jpg" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcly1fcop1pxb7nj30xy0n00x3.jpg" alt=""></p>
 </li>
 <li><p>给项目添加Tag，登录GitHub，打开刚才上传的项目，点击release：</p>
-<p><img src="/Users/zhangyongming/Desktop/QQ20170213-111827@2x.jpg" alt=""></p>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcly1fcop15tovjj31io0lcgqv.jpg" alt=""></p>
 <p>如下：</p>
-<p><img src="/Users/zhangyongming/Desktop/QQ20170213-112206@2x.jpg" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcly1fcop0zymj9j315g0kstb4.jpg" alt=""></p>
 <p>新建一个tag，输入版本号跟标题：</p>
-<p><img src="/Users/zhangyongming/Desktop/QQ20170213-112356@2x.jpg" alt=""></p>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcly1fcop1rorcij314w0ji0uh.jpg" alt=""></p>
 <p>然后点击<code>Publish</code>保存。</p>
 </li>
 <li><p>现在开源库就发布成功了，就这么简单！！！</p>
@@ -443,11 +443,11 @@
 </ol>
 <h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><ol>
 <li><p>打开<a href="https://jitpack.io/" target="_blank" rel="external">JitPack</a>，然后将开源库的github地址复制填进去：</p>
-<p><img src="/Users/zhangyongming/Desktop/QQ20170213-112928@2x.jpg" alt=""></p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcly1fcop1mn4hyj315w0ait9o.jpg" alt=""></p>
 <p>然后点击<code>Look up</code>。然后就可以看到我们刚才添加的tag</p>
-<p><img src="/Users/zhangyongming/Desktop/QQ20170213-113042@2x.jpg" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcly1fcop1aapg0j30xw0cq751.jpg" alt=""></p>
 <p>点击<code>Get it</code>，然后页面会移动到使用教程的地方</p>
-<p><img src="/Users/zhangyongming/Desktop/QQ20170213-113226@2x.jpg" alt=""></p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcly1fcop1whi2rj318y0tgn11.jpg" alt=""></p>
 </li>
 <li><p>关于如何使用，网站上已经说的很清楚了：</p>
 <ul>
