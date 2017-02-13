@@ -95,7 +95,6 @@
 发布开源库
 首先用Andr">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop18wtegj30jm0mitan.jpg">
-<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop16l34fj301w01mmx1.jpg">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop1pxb7nj30xy0n00x3.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fcop15tovjj31io0lcgqv.jpg">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop0zymj9j315g0kstb4.jpg">
@@ -103,7 +102,7 @@
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcly1fcop1mn4hyj315w0ait9o.jpg">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop1aapg0j30xw0cq751.jpg">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcly1fcop1whi2rj318y0tgn11.jpg">
-<meta property="og:updated_time" content="2017-02-13T03:45:00.000Z">
+<meta property="og:updated_time" content="2017-02-13T03:54:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何发布开源库到JitPack">
 <meta name="twitter:description" content="貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：
@@ -420,7 +419,7 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">classpath <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.5'</span></div></pre></td></tr></table></figure>
 <p>这里的插件版本一定要是最新的，不然可能会出现各种奇怪的问题，如果想知道最新的版本号是多少，可以去<a href="https://github.com/dcendents/android-maven-gradle-plugin" target="_blank" rel="external">这里</a>查看。添加完后，应该是这样的：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath <span class="string">'com.android.tools.build:gradle:2.2.3'</span></div><div class="line">        classpath <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.5'</span></div><div class="line">        <span class="comment">// <span class="doctag">NOTE:</span> Do not place your application dependencies here; they belong</span></div><div class="line">        <span class="comment">// in the individual module build.gradle files</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">task clean(<span class="string">type:</span> Delete) &#123;</div><div class="line">    delete rootProject.buildDir</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>然后根据提示进行Sync或者点击<img src="https://ww3.sinaimg.cn/large/006tKfTcly1fcop16l34fj301w01mmx1.jpg" alt="">图标进行同步。</p>
+<p>然后根据提示进行Sync或者点击<code>File--&gt;Synchronize</code>进行同步。</p>
 </li>
 <li><p>在需要发布的module里的build.gradle里的<code>apply plugin: &#39;com.android.library&#39;</code>添加如下两句：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.github.dcendents.android-maven'</span></div><div class="line">group=<span class="string">'com.github.yongming9011'</span></div></pre></td></tr></table></figure>
