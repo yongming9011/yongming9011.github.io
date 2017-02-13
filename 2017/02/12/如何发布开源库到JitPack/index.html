@@ -102,7 +102,7 @@
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcly1fcop1mn4hyj315w0ait9o.jpg">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fcop1aapg0j30xw0cq751.jpg">
 <meta property="og:image" content="https://ww4.sinaimg.cn/large/006tKfTcly1fcop1whi2rj318y0tgn11.jpg">
-<meta property="og:updated_time" content="2017-02-13T03:54:38.000Z">
+<meta property="og:updated_time" content="2017-02-13T08:28:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何发布开源库到JitPack">
 <meta name="twitter:description" content="貌似大家一般都把开源库放在JCenter上，我曾经也是想把开源项目托管到这个上面的，但是看了各种教程，经历了各种折腾之后。。。失败了。。。于是乎转向了近期比较热门的JitPack，这个配置可以说是超级方便啊，唯一的缺点就是Android Studio默认没有支持JitPack，要引入项目需要的话需要额外添加一句配置，不过这都不是事。好了，废话就说这么多，接下来就是操作：
@@ -450,7 +450,7 @@
 </li>
 <li><p>关于如何使用，网站上已经说的很清楚了：</p>
 <ul>
-<li><p>第一步：在项目的根目录的<code>build.gradle</code>下的allprojects下添加<code>maven { url &#39;https://jitpack.io&#39; }</code></p>
+<li><p>第一步：在项目的根目录的<code>build.gradle</code>下的allprojects下添加一句<code>maven { url &#39;https://jitpack.io&#39; }</code></p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">        maven &#123; url <span class="string">'https://jitpack.io'</span> &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>第二步：在项目的app下的build.gradle的dependencies下添加依赖<code>compile &#39;com.github.yongming9011:VerificationCodeView:v1.0&#39;</code></p>
