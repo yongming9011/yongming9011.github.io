@@ -136,8 +136,8 @@
 
     
     <entry>
-      <title><![CDATA[hexo问题汇总]]></title>
-      <url>%2F2016%2F02%2F08%2Fhexo%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%2F</url>
+      <title><![CDATA[hexo博客问题汇总]]></title>
+      <url>%2F2016%2F02%2F08%2Fhexo%E5%8D%9A%E5%AE%A2%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%2F</url>
       <content type="text"><![CDATA[搜索功能不可用或点击搜索不弹出搜索框首先检查hexo文件夹下的_config.yml文件是否包含以下配置： 12345search: path: search.xml field: post format: html limit: 10000 如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入http://zhangym.me/search.xml即博客网址后添加/search.xml看看是否能正常访问，若该xml文件打开出来类似如下错误： 说明某一篇文章的内容有乱码或者其他字符导致生成的search.xml不是标准的xml文件，导致搜索功能不可用，此时只需根据对应的提示，用代码编辑器打开/hexo/public/search.xml，去问题所在的行查看并修改问题即可。修改完毕再次使用http://zhangym.me/search.xml检查，如果正常，搜索功能应该就好了。]]></content>
     </entry>
 
