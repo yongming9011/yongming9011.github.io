@@ -87,8 +87,8 @@
 <meta name="description" content="我们都知道在Android中，一般的需求是子线程执行耗时任务，UI线程负责更新界面，所以我们一般都是子线程向主线程发送消息。关于子线程向主线程发送消息时要用到Handler机制，很多时候面试会让描述Android的Handler机制，那么Handler的机制是什么？下面就来解释下。
 第一种方式，创建Handler对象时不绑定Looper当子线程要相主线程发送一条消息时，如果发消息需要传递一些数据的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android主线程如何向子线程发送消息">
-<meta property="og:url" content="https://yongming9011.github.io/2017/02/16/Android主线程如何向子线程发送消息/index.html">
+<meta property="og:title" content="Android的Handler机制">
+<meta property="og:url" content="https://yongming9011.github.io/2017/02/16/Android的Handler机制/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
 <meta property="og:description" content="我们都知道在Android中，一般的需求是子线程执行耗时任务，UI线程负责更新界面，所以我们一般都是子线程向主线程发送消息。关于子线程向主线程发送消息时要用到Handler机制，很多时候面试会让描述Android的Handler机制，那么Handler的机制是什么？下面就来解释下。
 第一种方式，创建Handler对象时不绑定Looper当子线程要相主线程发送一条消息时，如果发消息需要传递一些数据的">
@@ -96,9 +96,9 @@
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwly1fcseh7ezabg30a00i90zq.gif">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwly1fcta0jvqw4j30800eigly.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwly1fcta0iaouqj30800en3yv.jpg">
-<meta property="og:updated_time" content="2017-02-21T07:26:12.000Z">
+<meta property="og:updated_time" content="2017-02-21T07:28:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android主线程如何向子线程发送消息">
+<meta name="twitter:title" content="Android的Handler机制">
 <meta name="twitter:description" content="我们都知道在Android中，一般的需求是子线程执行耗时任务，UI线程负责更新界面，所以我们一般都是子线程向主线程发送消息。关于子线程向主线程发送消息时要用到Handler机制，很多时候面试会让描述Android的Handler机制，那么Handler的机制是什么？下面就来解释下。
 第一种方式，创建Handler对象时不绑定Looper当子线程要相主线程发送一条消息时，如果发消息需要传递一些数据的">
 <meta name="twitter:image" content="https://ww2.sinaimg.cn/large/006tNbRwly1fcsegbxxr4g30a00isn05.gif">
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://yongming9011.github.io/2017/02/16/Android主线程如何向子线程发送消息/"/>
+  <link rel="canonical" href="https://yongming9011.github.io/2017/02/16/Android的Handler机制/"/>
 
 
 
 
 
-  <title> Android主线程如何向子线程发送消息 | 从百草园到三味书屋 </title>
+  <title> Android的Handler机制 | 从百草园到三味书屋 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -291,7 +291,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://yongming9011.github.io/2017/02/16/Android主线程如何向子线程发送消息/">
+  <link itemprop="mainEntityOfPage" href="https://yongming9011.github.io/2017/02/16/Android的Handler机制/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="张永明">
@@ -315,7 +315,7 @@
             
             
               
-                Android主线程如何向子线程发送消息
+                Android的Handler机制
               
             
           </h2>
@@ -371,8 +371,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/16/Android主线程如何向子线程发送消息/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/16/Android主线程如何向子线程发送消息/" itemprop="commentCount"></span>
+                <a href="/2017/02/16/Android的Handler机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/16/Android的Handler机制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -514,10 +514,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/02/16/Android主线程如何向子线程发送消息/"
-     data-title="Android主线程如何向子线程发送消息"
+        <div class="ds-share flat" data-thread-key="2017/02/16/Android的Handler机制/"
+     data-title="Android的Handler机制"
      data-content=""
-     data-url="https://yongming9011.github.io/2017/02/16/Android主线程如何向子线程发送消息/">
+     data-url="https://yongming9011.github.io/2017/02/16/Android的Handler机制/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -544,8 +544,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/16/Android主线程如何向子线程发送消息/"
-           data-title="Android主线程如何向子线程发送消息" data-url="https://yongming9011.github.io/2017/02/16/Android主线程如何向子线程发送消息/">
+      <div class="ds-thread" data-thread-key="2017/02/16/Android的Handler机制/"
+           data-title="Android的Handler机制" data-url="https://yongming9011.github.io/2017/02/16/Android的Handler机制/">
       </div>
     
   </div>
