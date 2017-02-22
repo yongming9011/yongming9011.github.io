@@ -96,7 +96,7 @@
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwly1fcseh7ezabg30a00i90zq.gif">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwly1fcta0jvqw4j30800eigly.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwly1fcta0iaouqj30800en3yv.jpg">
-<meta property="og:updated_time" content="2017-02-21T07:41:01.000Z">
+<meta property="og:updated_time" content="2017-02-22T03:14:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android的Handler机制">
 <meta name="twitter:description" content="我们都知道在Android中，一般的需求是子线程执行耗时任务，UI线程负责更新界面，所以我们一般都是子线程向主线程发送消息。关于子线程向主线程发送消息时要用到Handler机制，很多时候面试会让描述Android的Handler机制，那么Handler的机制是什么？下面就来解释下。
@@ -432,7 +432,7 @@
 <h3 id="关于在子线程更新UI的方法"><a href="#关于在子线程更新UI的方法" class="headerlink" title="关于在子线程更新UI的方法"></a>关于在子线程更新UI的方法</h3><p>如果需要在子线程更新UI，有两种方法：</p>
 <ol>
 <li>如果是在Activity中，则可以直接使用<code>runOnUiThread(Runnable action)</code>方法进行更新UI。</li>
-<li>使用Handler的<code>post(Runnable r)</code>方法。</li>
+<li>使用<code>Handler mHandler = new Handler(Looper.getMainLooper())</code>将Handler对象与主线程绑定，然后使用Handler的<code>post(Runnable r)</code>方法，重写Runnable的<code>run()</code>方法，在<code>run()</code>方法中更新UI。</li>
 </ol>
 <p>关于这两个方法的区别，从<code>runOnUiThread(Runnable action)</code>方法源码中可以看出来：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Runs the specified action on the UI thread. If the current thread is the UI</div><div class="line"> * thread, then the action is executed immediately. If the current thread is</div><div class="line"> * not the UI thread, the action is posted to the event queue of the UI thread.</div><div class="line"> *</div><div class="line"> * <span class="doctag">@param</span> action the action to run on the UI thread</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">runOnUiThread</span><span class="params">(Runnable action)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (Thread.currentThread() != mUiThread) &#123;</div><div class="line">        mHandler.post(action);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        action.run();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
