@@ -94,15 +94,15 @@
 <meta property="og:description" content="ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的
 
 出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可">
-<meta property="og:image" content="https://ww1.sinaimg.cn/large/006tKfTcly1fdrf4bv67ig309a0gve73.gif">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fdrghvlx7vg309o0hkted.gif">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fdrgbjgjg9g309o0hkjvs.gif">
-<meta property="og:updated_time" content="2017-03-18T16:20:06.000Z">
+<meta property="og:updated_time" content="2017-03-18T16:26:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ListView里的CheckBox错乱问题的两种解决方式">
 <meta name="twitter:description" content="ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的
 
 出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可">
-<meta name="twitter:image" content="https://ww1.sinaimg.cn/large/006tKfTcly1fdrf4bv67ig309a0gve73.gif">
+<meta name="twitter:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fdrghvlx7vg309o0hkted.gif">
 
 
 
@@ -405,7 +405,7 @@
 
       
         <p>ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的</p>
-<p><img src="https://ww1.sinaimg.cn/large/006tKfTcly1fdrf4bv67ig309a0gve73.gif" alt=""></p>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcly1fdrghvlx7vg309o0hkted.gif" alt=""></p>
 <p>出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可见时，系统会将它缓存起来复用给后面的item，所以在滑动到第8个item的时候，getView()方法中的convertView就是第1个item的。重用convertView可以避免大量重复的inflate跟findViewById，会使ListView的性能大大提升，但是带来的问题就是，第8个item的convertView其实是第1个复用下来的，如果我们在第1个item上做了操作，而在第8个item上没有刷新数据，就会导致上面的错乱问题。</p>
 <p>解决这个问题有两种办法：</p>
 <ol>
