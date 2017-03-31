@@ -153,7 +153,7 @@
 <meta property="og:image" content="https://ww1.sinaimg.cn/large/006y8lValy1fciubbtua6j30bj020aa5.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006y8lValy1fciua4e96dj30bj03raal.jpg">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006y8lValy1fciubn5irwj30bj01u0sw.jpg">
-<meta property="og:updated_time" content="2017-03-31T14:14:31.000Z">
+<meta property="og:updated_time" content="2017-03-31T14:16:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git&GitHub的使用">
 <meta name="twitter:description" content="一、     前言1.     简介Git是Linux作者Linus Torvalds开发的一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
@@ -507,7 +507,7 @@
 <p>所以，同一个文件，如果已经执行了add命令，然后再修改，再执行commit命令，其实修改是无效的。</p>
 <h2 id="2-管理版本库"><a href="#2-管理版本库" class="headerlink" title="2.     管理版本库"></a>2.     管理版本库</h2><p>要随时掌握工作区的状态，使用<code>git status</code>命令。</p>
 <p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。</p>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a><strong>版本回退</strong></h3><p>Ø  使用回退命令前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。如果嫌输出信息太多，看得眼花缭乱的，可以试试加上<em>–pretty=oneline</em>参数，即<code>git log --pretty=oneline</code></p>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a><strong>版本回退</strong></h3><p>Ø  使用回退命令前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。如果嫌输出信息太多，看得眼花缭乱的，可以试试加上–pretty=oneline参数，即<code>git log --pretty=oneline</code></p>
 <p><img src="https://ww2.sinaimg.cn/large/006y8lValy1fciu9z5vh0j30bj036aao.jpg" alt="img"></p>
 <p>和SVN不一样，Git的commit id不是1，2，3……递增的数字，而是一个SHA1计算出来的一个非常大的数字，用十六进制表示，而且你看到的commit id和我的肯定不一样，以自己的为准。为什么commit id需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，大家每人都有一个完成的版本库，且每个人手上修改的东西都不一样，如果大家都用1，2，3……作为版本号，你手上的1版本跟我手上的1版本内容肯定不一样，那肯定就冲突了。</p>
 <p>Ø  Git允许我们在版本的历史之间回退，使用命令<code>git reset --hard HEAD^</code> 或者<code>git reset --hard commit_id</code>。Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交3628164…882e1e0（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</p>
