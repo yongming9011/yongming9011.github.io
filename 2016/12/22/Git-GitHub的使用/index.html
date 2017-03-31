@@ -153,7 +153,7 @@
 <meta property="og:image" content="https://ww1.sinaimg.cn/large/006y8lValy1fciubbtua6j30bj020aa5.jpg">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006y8lValy1fciua4e96dj30bj03raal.jpg">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006y8lValy1fciubn5irwj30bj01u0sw.jpg">
-<meta property="og:updated_time" content="2017-03-31T14:16:40.000Z">
+<meta property="og:updated_time" content="2017-03-31T14:21:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git&GitHub的使用">
 <meta name="twitter:description" content="一、     前言1.     简介Git是Linux作者Linus Torvalds开发的一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
@@ -507,7 +507,7 @@
 <p>所以，同一个文件，如果已经执行了add命令，然后再修改，再执行commit命令，其实修改是无效的。</p>
 <h2 id="2-管理版本库"><a href="#2-管理版本库" class="headerlink" title="2.     管理版本库"></a>2.     管理版本库</h2><p>要随时掌握工作区的状态，使用<code>git status</code>命令。</p>
 <p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。</p>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a><strong>版本回退</strong></h3><p>Ø  使用回退命令前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。如果嫌输出信息太多，看得眼花缭乱的，可以试试加上–pretty=oneline参数，即<code>git log --pretty=oneline</code></p>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a><strong>版本回退</strong></h3><p>Ø  使用回退命令前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。如果嫌输出信息太多，看得眼花缭乱的，可以试试加上<code>--pretty=oneline</code>参数，即<code>git log --pretty=oneline</code></p>
 <p><img src="https://ww2.sinaimg.cn/large/006y8lValy1fciu9z5vh0j30bj036aao.jpg" alt="img"></p>
 <p>和SVN不一样，Git的commit id不是1，2，3……递增的数字，而是一个SHA1计算出来的一个非常大的数字，用十六进制表示，而且你看到的commit id和我的肯定不一样，以自己的为准。为什么commit id需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，大家每人都有一个完成的版本库，且每个人手上修改的东西都不一样，如果大家都用1，2，3……作为版本号，你手上的1版本跟我手上的1版本内容肯定不一样，那肯定就冲突了。</p>
 <p>Ø  Git允许我们在版本的历史之间回退，使用命令<code>git reset --hard HEAD^</code> 或者<code>git reset --hard commit_id</code>。Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交3628164…882e1e0（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</p>
@@ -521,7 +521,7 @@
 <li>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</li>
 <li>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</li>
 </ul>
-<p>总之，就是让这个文件回到最近一次git commit或git add时的状态。<code>git checkout -- file</code>命令中的<strong>–</strong>很重要，没有<strong>–</strong>，就变成了“切换到另一个分支”的命令。当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
+<p>总之，就是让这个文件回到最近一次git commit或git add时的状态。<code>git checkout -- file</code>命令中的<code>--</code>很重要，没有<code>--</code>，就变成了“切换到另一个分支”的命令。当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</p>
 </li>
 <li><p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时（执行了add命令），想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>可以把暂存区的修改撤销掉，重新放回工作区，这样就回到了场景1，第二步按场景1操作。git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。</p>
 </li>
@@ -532,7 +532,7 @@
 <p>使用<code>git status</code> 命令，git会发现工作区跟版本库不同步了</p>
 <p><img src="https://ww1.sinaimg.cn/large/006y8lValy1fciu9xb3dij30bj045mxp.jpg" alt="img"></p>
 <p>现在你有两个选择，一是确实要从版本库中删除该文件，那就用命令<code>git rm</code>删掉，并且<code>git commit</code>，现在，文件就从版本库中被删除了。</p>
-<p>另一种情况是删错了，因为缓存区里还有呢，所以可以使用<code>git checkout -- test.md</code>很轻松地把误删的文件恢复到最新版本。</p>
+<p>另一种情况是删错了，因为缓存区里还有呢，所以可以使用<code>git checkout --test.md</code>很轻松地把误删的文件恢复到最新版本。</p>
 <p>git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
 <h2 id="5-远程仓库GitHub"><a href="#5-远程仓库GitHub" class="headerlink" title="5.     远程仓库GitHub"></a>5.     远程仓库GitHub</h2><p>将代码托管到GitHub，当然，仅限个人项目，公司项目需慎重（小心公司起诉你）。</p>
 <h3 id="1-从本地仓库关联远程仓库"><a href="#1-从本地仓库关联远程仓库" class="headerlink" title="1)      从本地仓库关联远程仓库"></a>1)      从本地仓库关联远程仓库</h3><p>Ø  首先，在<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a>注册一个账号，相信大家都会的。</p>
