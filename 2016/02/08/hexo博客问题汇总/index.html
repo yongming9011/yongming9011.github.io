@@ -98,7 +98,7 @@
 12345search:  path: search.xml  field: post  format: html  limit: 10000
 如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入http://zhangym.me/sear">
 <meta property="og:image" content="https://ww1.sinaimg.cn/large/006y8lValy1fcj4zxce77j31b20c2why.jpg">
-<meta property="og:updated_time" content="2017-02-17T00:50:22.000Z">
+<meta property="og:updated_time" content="2018-09-03T17:13:04.202Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客问题汇总">
 <meta name="twitter:description" content="搜索功能不可用或点击搜索不弹出搜索框首先检查hexo文件夹下的_config.yml文件是否包含以下配置：
@@ -415,6 +415,7 @@
 <p>如果配置正常的话，搜索功能还是无法使用，那么问题应该出在search.xml文件上了。在谷歌浏览器栏输入<code>http://zhangym.me/search.xml</code>即博客网址后添加<code>/search.xml</code>看看是否能正常访问，若该xml文件打开出来类似如下错误：</p>
 <p><img src="https://ww1.sinaimg.cn/large/006y8lValy1fcj4zxce77j31b20c2why.jpg" alt=""></p>
 <p>说明某一篇文章的内容有乱码或者其他字符导致生成的search.xml不是标准的xml文件，导致搜索功能不可用，此时只需根据对应的提示，用代码编辑器打开/hexo/public/search.xml，去问题所在的行查看并修改问题即可。修改完毕再次使用<code>http://zhangym.me/search.xml</code>检查，如果正常，搜索功能应该就好了。</p>
+<h4 id="点击某个标签出现404页面的问题"><a href="#点击某个标签出现404页面的问题" class="headerlink" title="点击某个标签出现404页面的问题"></a>点击某个标签出现404页面的问题</h4><p>如果确定该标签确实在文章中有，则很可能是标签重复了，比如我的几篇博客中均把Java设置了tags，结果有一篇用的是小写的java，另外的几篇都用的是Java，结果点击Java就直接404，点击java就好着，最后的解决方案是把所有的Java改为java。</p>
 
       
     </div>
@@ -644,7 +645,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索功能不可用或点击搜索不弹出搜索框"><span class="nav-number">1.</span> <span class="nav-text">搜索功能不可用或点击搜索不弹出搜索框</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索功能不可用或点击搜索不弹出搜索框"><span class="nav-number">1.</span> <span class="nav-text">搜索功能不可用或点击搜索不弹出搜索框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#点击某个标签出现404页面的问题"><span class="nav-number">2.</span> <span class="nav-text">点击某个标签出现404页面的问题</span></a></li></ol></div>
             
 
           </div>
