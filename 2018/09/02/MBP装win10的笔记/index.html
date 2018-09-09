@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/0069RVTdly1fuvmoqeg12j317i0uido7.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/0069RVTdly1fuvmu0b8jnj319k0tqdmf.jpg">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/0069RVTdly1fuvmx9e8ntj31a80y07fn.jpg">
-<meta property="og:updated_time" content="2018-09-03T13:43:52.986Z">
+<meta property="og:updated_time" content="2018-09-09T11:10:50.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MBP装win10的笔记">
 <meta name="twitter:description" content="有时候有一些工具跟操作只能在win平台下进行，本来用Parallels装的win10的虚拟机也将就一直能用，但是有几个问题却没法解决，比如有时候需要访问一些硬件刷机什么的，虚拟机就无能为力了。所以狠下心来，直接把虚拟机的win10干掉了，准备给MBP装双系统，装了整整一下午，中间也是各种坑。好在终于装好了，勉强能用，就是win10对retina屏支持的不好，字体界面什么的还是有点小。现在记录以下，">
@@ -418,15 +418,15 @@
 <p><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fuvmoqeg12j317i0uido7.jpg" alt=""></p>
 <p>恶心的是，磁盘空间直接没法回收了。依旧是百度了一下，直接郁闷了，有的让重装macOS，有的用了一堆命令行解决，我都觉得不妥，好在后来找到了一个比较靠谱的解决办法，主要步骤如下：</p>
 <ol>
-<li>打开磁盘工具，选择磁盘的根目录，点击分区，然后依次（记住一定要按顺序点，不然后面的点不了）删掉新建的分区，点击应用。</li>
-</ol>
+<li><p>打开磁盘工具，选择磁盘的根目录，点击分区，然后依次（记住一定要按顺序点，不然后面的点不了）删掉新建的分区，点击应用。</p>
 <p><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fuvmu0b8jnj319k0tqdmf.jpg" alt=""></p>
 <p><img src="https://ws2.sinaimg.cn/large/0069RVTdly1fuvmx9e8ntj31a80y07fn.jpg" alt=""></p>
-<ol>
+</li>
 <li><p>如果bootcamp是个灰色的，那就先选中bootcamp的磁盘，点击界面上方的【装载】，然后点【抹掉】，抹掉的时候选择格式为“Mac OS 扩展（日志式）”，抹掉以后，点击菜单栏里面的【文件】→【运行急救】，然后再执行2里面的操作。如果2里面的减号是灰色的无法点击，也可以先尝试抹掉成日志式，然后再继续。</p>
 <p>以上操作的帖子<a href="https://blog.csdn.net/jackymvc/article/details/50337599" target="_blank" rel="external">原地址</a>，但是他那个版本跟我的应该不一样，有些操作还是有点差异的。</p>
 </li>
 </ol>
+<p>PS：最近又发现了一个博客对于如何彻底删除Windows系统给出了详细教程，并说明了为什么需要这么繁琐的操作，貌似在新版的<a href="https://www.apple.com/cn/macos/mojave-preview/" target="_blank" rel="external">macOS Mojave</a>已经解决了，新版本的直接用【移除 Windows 并恢复分区】选项就行了。原文地址：<a href="https://sspai.com/post/43699" target="_blank" rel="external">https://sspai.com/post/43699</a></p>
 </li>
 </ol>
 
