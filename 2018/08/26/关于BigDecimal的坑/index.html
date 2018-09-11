@@ -89,29 +89,29 @@
 
 <meta name="description" content="我们都知道如果要使用Java进行浮点数运算是不能直接使用+，-，*，/运算符去直接运算的，否则会丢失经度，类似这样的：
 12double d = 0.1 + 0.2;System.out.println(d);
-输出的结果就是0.30000000000000004，这个结果明显是有问题的。
+输出的结果就是0.30000000000000004，这个结果明显是有问题的。
 要解决精度丢失的问题，一般我们会用到BigDecimal类，但是这个类其实也是有坑的。
 
-坑1：">
+坑1：如果使用构造">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于BigDecimal的坑">
 <meta property="og:url" content="https://yongming9011.github.io/2018/08/26/关于BigDecimal的坑/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
 <meta property="og:description" content="我们都知道如果要使用Java进行浮点数运算是不能直接使用+，-，*，/运算符去直接运算的，否则会丢失经度，类似这样的：
 12double d = 0.1 + 0.2;System.out.println(d);
-输出的结果就是0.30000000000000004，这个结果明显是有问题的。
+输出的结果就是0.30000000000000004，这个结果明显是有问题的。
 要解决精度丢失的问题，一般我们会用到BigDecimal类，但是这个类其实也是有坑的。
 
-坑1：">
-<meta property="og:updated_time" content="2018-09-11T13:18:06.709Z">
+坑1：如果使用构造">
+<meta property="og:updated_time" content="2018-09-11T13:23:28.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于BigDecimal的坑">
 <meta name="twitter:description" content="我们都知道如果要使用Java进行浮点数运算是不能直接使用+，-，*，/运算符去直接运算的，否则会丢失经度，类似这样的：
 12double d = 0.1 + 0.2;System.out.println(d);
-输出的结果就是0.30000000000000004，这个结果明显是有问题的。
+输出的结果就是0.30000000000000004，这个结果明显是有问题的。
 要解决精度丢失的问题，一般我们会用到BigDecimal类，但是这个类其实也是有坑的。
 
-坑1：">
+坑1：如果使用构造">
 
 
 
@@ -419,7 +419,7 @@
       
         <p>我们都知道如果要使用Java进行浮点数运算是不能直接使用<code>+</code>，<code>-</code>，<code>*</code>，<code>/</code>运算符去直接运算的，否则会丢失经度，类似这样的：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">double</span> d = <span class="number">0.1</span> + <span class="number">0.2</span>;</div><div class="line">System.out.println(d);</div></pre></td></tr></table></figure>
-<p>输出的结果就是<code>0.30000000000000004</code>，这个结果明显是有问题的。</p>
+<p>输出的结果就是<code>0.30000000000000004</code>，这个结果明显是有问题的。</p>
 <p>要解决精度丢失的问题，一般我们会用到BigDecimal类，但是这个类其实也是有坑的。</p>
 <ul>
 <li>坑1：如果使用构造方法创建BigDecimal，则参数必须为<em>String</em>类型的，否则还是会丢失精度，比如：</li>
