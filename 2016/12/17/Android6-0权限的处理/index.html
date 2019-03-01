@@ -6,15 +6,15 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -66,40 +66,39 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Android,权限,动态权限," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="Android,权限,动态权限,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.jpg?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.jpg?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="关于Android6.0，在申请权限的时有以下需要注意的地方：
-若用户勾选了不再提示的选择框之后，是不会再弹出系统的权限申请提示框，这就麻烦了，此时我们需要提示用户去设置里为app开启相应的权限。具体做法：在onRequestPermissionsResult()方法中判断用户拒绝权限后shouldShowRequestPermissionRationale()的值，该值若为false，则表示用户">
+<meta name="description" content="关于Android6.0，在申请权限的时有以下需要注意的地方： 若用户勾选了不再提示的选择框之后，是不会再弹出系统的权限申请提示框，这就麻烦了，此时我们需要提示用户去设置里为app开启相应的权限。具体做法：在onRequestPermissionsResult()方法中判断用户拒绝权限后shouldShowRequestPermissionRationale()的值，该值若为false，则表示用户">
+<meta name="keywords" content="Android,权限,动态权限">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android6.0权限的处理">
 <meta property="og:url" content="https://yongming9011.github.io/2016/12/17/Android6-0权限的处理/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
-<meta property="og:description" content="关于Android6.0，在申请权限的时有以下需要注意的地方：
-若用户勾选了不再提示的选择框之后，是不会再弹出系统的权限申请提示框，这就麻烦了，此时我们需要提示用户去设置里为app开启相应的权限。具体做法：在onRequestPermissionsResult()方法中判断用户拒绝权限后shouldShowRequestPermissionRationale()的值，该值若为false，则表示用户">
+<meta property="og:description" content="关于Android6.0，在申请权限的时有以下需要注意的地方： 若用户勾选了不再提示的选择框之后，是不会再弹出系统的权限申请提示框，这就麻烦了，此时我们需要提示用户去设置里为app开启相应的权限。具体做法：在onRequestPermissionsResult()方法中判断用户拒绝权限后shouldShowRequestPermissionRationale()的值，该值若为false，则表示用户">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-02-08T00:55:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android6.0权限的处理">
-<meta name="twitter:description" content="关于Android6.0，在申请权限的时有以下需要注意的地方：
-若用户勾选了不再提示的选择框之后，是不会再弹出系统的权限申请提示框，这就麻烦了，此时我们需要提示用户去设置里为app开启相应的权限。具体做法：在onRequestPermissionsResult()方法中判断用户拒绝权限后shouldShowRequestPermissionRationale()的值，该值若为false，则表示用户">
+<meta name="twitter:description" content="关于Android6.0，在申请权限的时有以下需要注意的地方： 若用户勾选了不再提示的选择框之后，是不会再弹出系统的权限申请提示框，这就麻烦了，此时我们需要提示用户去设置里为app开启相应的权限。具体做法：在onRequestPermissionsResult()方法中判断用户拒绝权限后shouldShowRequestPermissionRationale()的值，该值若为false，则表示用户">
 
 
 
@@ -127,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://yongming9011.github.io/2016/12/17/Android6-0权限的处理/"/>
+  <link rel="canonical" href="https://yongming9011.github.io/2016/12/17/Android6-0权限的处理/">
 
 
 
@@ -167,7 +166,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">从百草园到三味书屋</span>
         <span class="logo-line-after"><i></i></span>
@@ -197,7 +196,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -207,7 +206,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -217,7 +216,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -227,7 +226,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -237,7 +236,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -250,7 +249,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -271,9 +270,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -310,7 +307,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张永明">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/logo.jpg">
     </span>
 
@@ -353,7 +350,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -386,7 +383,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -411,8 +408,8 @@
 <p>从字面意思可以看出，这个方法是告诉我们是否应该向用户解释我们申请该权限的原因，即告诉用户我们为什么要申请该权限。在app第一次安装的时候。这个方法会返回false，因此你可以直接请求任何需要的权限。如果用户以前拒绝了一个请求，这个方法将返回true，表示你应该向用户解释了。那样的话你应该考虑在再次触发权限对话框之前显示一个解释请求用途之类的信息。此后，如果用户一直点击拒绝，则该值一直为true。</p>
 <p>最终，当app完全没有机会被授权的时候，即用户选中了<strong>不再显示</strong>的复选框之后，<code>shouldShowRequestPermissionRationale()</code>则返回false，这里的意思很明显，用户都已经勾选不再显示了，我们也就不需要再解释了。</p>
 <p>然而，我们便可以利用这个方法的返回值进行判断用户是否拒绝并勾选不再显示，当用户拒绝并勾选不再提示后，则我们可以在<code>onRequestPermissionsResult()</code>方法中判断用户<strong>拒绝权限后</strong>该值是否为false，如果为false，那么表示用户拒绝了权限并勾选不再显示。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span>  </div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(<span class="keyword">int</span> requestCode, @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults)</span> </span>&#123;  </div><div class="line">	<span class="keyword">super</span>.onRequestPermissionsResult(requestCode, permissions, grantResults);  </div><div class="line">	<span class="keyword">if</span> (grantResults[<span class="number">0</span>] == PackageManager.PERMISSION_DENIED)&#123;  </div><div class="line">		<span class="keyword">if</span> (ActivityCompat.shouldShowRequestPermissionRationale(<span class="keyword">this</span>,permissions[<span class="number">0</span>]))&#123;  </div><div class="line">			<span class="comment">// 用户拒绝，并勾选了 不再显示  </span></div><div class="line">		&#125;  </div><div class="line">	&#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>建议使用GitHub上严振杰大神封装好的库<a href="https://github.com/yanzhenjie/AndPermission" target="_blank" rel="external">AndPermission</a>，还是比较方便的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(<span class="keyword">int</span> requestCode, @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults)</span> </span>&#123;  </span><br><span class="line">	<span class="keyword">super</span>.onRequestPermissionsResult(requestCode, permissions, grantResults);  </span><br><span class="line">	<span class="keyword">if</span> (grantResults[<span class="number">0</span>] == PackageManager.PERMISSION_DENIED)&#123;  </span><br><span class="line">		<span class="keyword">if</span> (ActivityCompat.shouldShowRequestPermissionRationale(<span class="keyword">this</span>,permissions[<span class="number">0</span>]))&#123;  </span><br><span class="line">			<span class="comment">// 用户拒绝，并勾选了 不再显示  </span></span><br><span class="line">		&#125;  </span><br><span class="line">	&#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>建议使用GitHub上严振杰大神封装好的库<a href="https://github.com/yanzhenjie/AndPermission" target="_blank" rel="noopener">AndPermission</a>，还是比较方便的。</p>
 
       
     </div>
@@ -435,13 +432,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wx.png" alt="张永明 WeChat Pay"/>
+          <img id="wechat_qr" src="/images/wx.png" alt="张永明 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/zfb.jpg" alt="张永明 Alipay"/>
+          <img id="alipay_qr" src="/images/zfb.jpg" alt="张永明 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -547,9 +544,7 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/logo.jpg"
-               alt="张永明" />
+          <img class="site-author-image" itemprop="image" src="/images/logo.jpg" alt="张永明">
           <p class="site-author-name" itemprop="name">张永明</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -641,7 +636,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

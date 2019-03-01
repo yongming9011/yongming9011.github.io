@@ -6,15 +6,15 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -66,45 +66,41 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="ListView,CheckBox,错乱," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="ListView,CheckBox,错乱,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.jpg?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.jpg?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的
-
-出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可">
+<meta name="description" content="ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的  出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可">
+<meta name="keywords" content="ListView,CheckBox,错乱">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ListView里的CheckBox错乱问题的两种解决方式">
 <meta property="og:url" content="https://yongming9011.github.io/2017/03/18/ListView里的CheckBox错乱问题的两种解决方式/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
-<meta property="og:description" content="ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的
-
-出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可">
+<meta property="og:description" content="ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的  出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fdrghvlx7vg309o0hkted.gif">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcly1fdrglr46lkg309o0hkk3d.gif">
 <meta property="og:updated_time" content="2017-03-19T06:42:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ListView里的CheckBox错乱问题的两种解决方式">
-<meta name="twitter:description" content="ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的
-
-出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可">
+<meta name="twitter:description" content="ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的  出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可">
 <meta name="twitter:image" content="https://ww2.sinaimg.cn/large/006tKfTcly1fdrghvlx7vg309o0hkted.gif">
 
 
@@ -133,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://yongming9011.github.io/2017/03/18/ListView里的CheckBox错乱问题的两种解决方式/"/>
+  <link rel="canonical" href="https://yongming9011.github.io/2017/03/18/ListView里的CheckBox错乱问题的两种解决方式/">
 
 
 
@@ -173,7 +169,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">从百草园到三味书屋</span>
         <span class="logo-line-after"><i></i></span>
@@ -203,7 +199,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -213,7 +209,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -223,7 +219,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -233,7 +229,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -243,7 +239,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -256,7 +252,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -277,9 +273,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -316,7 +310,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张永明">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/logo.jpg">
     </span>
 
@@ -359,7 +353,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -392,7 +386,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -412,22 +406,22 @@
 
       
         <p>ListView里面如果有CheckBox跟RadioButton的话，而且Adapter复用了convertView的话，基本上是会100%出现滑动错乱的，比如像下面这样的</p>
-<p><img src="https://ww2.sinaimg.cn/large/006tKfTcly1fdrghvlx7vg309o0hkted.gif" alt=""></p>
+<p><img src="https://ww2.sinaimg.cn/large/006tKfTcly1fdrghvlx7vg309o0hkted.gif" alt></p>
 <p>出现这个问题的根本原因还是在convertView复用的时候没有对CheckBox做处理，我们知道，假设手机屏幕一屏能显示7个item，则刚开始会一次性创建7个convertView，当屏幕往上滑的时候，第1个item不可见时，系统会将它缓存起来复用给后面的item，所以在滑动到第8个item的时候，getView()方法中的convertView就是第1个item的。重用convertView可以避免大量重复的inflate跟findViewById，会使ListView的性能大大提升，但是带来的问题就是，第8个item的convertView其实是第1个复用下来的，如果我们在第1个item上做了操作，而在第8个item上没有刷新数据，就会导致上面的错乱问题。</p>
 <p>解决这个问题有两种办法：</p>
 <ol>
 <li><p>在Adapter中使用ArrayList保存所有CheckBox的选中状态，然后在OnCheckedChangeListener中监听CheckBox的状态，对状态进行相应的保存，代码很简单，相信大家看看就明白了，直接上代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListViewAdapter1</span> <span class="keyword">extends</span> <span class="title">BaseAdapter</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> List&lt;String&gt; cities;</div><div class="line">    <span class="keyword">private</span> LayoutInflater mInflater;</div><div class="line">    <span class="comment">// 创建一个List用于保存CheckBox的选中状态</span></div><div class="line">    <span class="keyword">private</span> List&lt;Boolean&gt; checks = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ListViewAdapter1</span><span class="params">(Context context, List&lt;String&gt; cities)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.cities = cities;</div><div class="line">        mInflater = LayoutInflater.from(context);</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cities.size(); i++) &#123;</div><div class="line">            <span class="comment">// 刚开始，所有的CheckBox都是未选中的</span></div><div class="line">            checks.add(<span class="keyword">false</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> cities.size();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getItem</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> cities.get(position);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getItemId</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> position;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">getView</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> position, View convertView, ViewGroup parent)</span> </span>&#123;</div><div class="line">        ViewHolder holder = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) &#123;</div><div class="line">            holder = <span class="keyword">new</span> ViewHolder();</div><div class="line">            convertView = mInflater.inflate(R.layout.listview_item, parent, <span class="keyword">false</span>);</div><div class="line">            holder.cbListView = (CheckBox) convertView.findViewById(R.id.cb_listView);</div><div class="line">            holder.tvListView = (TextView) convertView.findViewById(R.id.tv_listView);</div><div class="line">            convertView.setTag(holder);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            holder = (ViewHolder) convertView.getTag();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        holder.tvListView.setText(cities.get(position));</div><div class="line"></div><div class="line">        holder.cbListView.setOnCheckedChangeListener(<span class="keyword">new</span> CompoundButton.OnCheckedChangeListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCheckedChanged</span><span class="params">(CompoundButton buttonView, <span class="keyword">boolean</span> isChecked)</span> </span>&#123;</div><div class="line">                <span class="keyword">if</span> (isChecked) &#123;</div><div class="line">                    <span class="comment">// 当CheckBox被选中，将相应position的值设置为true</span></div><div class="line">                    checks.set(position, <span class="keyword">true</span>);</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    <span class="comment">// 当CheckBox取消选中，将对应position的值设置为false</span></div><div class="line">                    checks.set(position,<span class="keyword">false</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        <span class="comment">// 根据相应位置的checks值设置CheckBox的选中状态</span></div><div class="line">        holder.cbListView.setChecked(checks.get(position));</div><div class="line"></div><div class="line">        <span class="keyword">return</span> convertView;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span> </span>&#123;</div><div class="line">        CheckBox cbListView;</div><div class="line">        TextView tvListView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListViewAdapter1</span> <span class="keyword">extends</span> <span class="title">BaseAdapter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; cities;</span><br><span class="line">    <span class="keyword">private</span> LayoutInflater mInflater;</span><br><span class="line">    <span class="comment">// 创建一个List用于保存CheckBox的选中状态</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Boolean&gt; checks = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ListViewAdapter1</span><span class="params">(Context context, List&lt;String&gt; cities)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.cities = cities;</span><br><span class="line">        mInflater = LayoutInflater.from(context);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cities.size(); i++) &#123;</span><br><span class="line">            <span class="comment">// 刚开始，所有的CheckBox都是未选中的</span></span><br><span class="line">            checks.add(<span class="keyword">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> cities.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getItem</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> cities.get(position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getItemId</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> position;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">getView</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> position, View convertView, ViewGroup parent)</span> </span>&#123;</span><br><span class="line">        ViewHolder holder = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) &#123;</span><br><span class="line">            holder = <span class="keyword">new</span> ViewHolder();</span><br><span class="line">            convertView = mInflater.inflate(R.layout.listview_item, parent, <span class="keyword">false</span>);</span><br><span class="line">            holder.cbListView = (CheckBox) convertView.findViewById(R.id.cb_listView);</span><br><span class="line">            holder.tvListView = (TextView) convertView.findViewById(R.id.tv_listView);</span><br><span class="line">            convertView.setTag(holder);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            holder = (ViewHolder) convertView.getTag();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        holder.tvListView.setText(cities.get(position));</span><br><span class="line"></span><br><span class="line">        holder.cbListView.setOnCheckedChangeListener(<span class="keyword">new</span> CompoundButton.OnCheckedChangeListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCheckedChanged</span><span class="params">(CompoundButton buttonView, <span class="keyword">boolean</span> isChecked)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (isChecked) &#123;</span><br><span class="line">                    <span class="comment">// 当CheckBox被选中，将相应position的值设置为true</span></span><br><span class="line">                    checks.set(position, <span class="keyword">true</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 当CheckBox取消选中，将对应position的值设置为false</span></span><br><span class="line">                    checks.set(position,<span class="keyword">false</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 根据相应位置的checks值设置CheckBox的选中状态</span></span><br><span class="line">        holder.cbListView.setChecked(checks.get(position));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> convertView;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span> </span>&#123;</span><br><span class="line">        CheckBox cbListView;</span><br><span class="line">        TextView tvListView;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>第二种方法原理跟第一种一样，也是监听CheckBox的选中状态然后进行保存，只不错用的是<code>Map&lt;Integer,Boolean&gt;</code>保存，下面是代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListViewAdapter</span> <span class="keyword">extends</span> <span class="title">BaseAdapter</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> List&lt;String&gt; cities;</div><div class="line">    <span class="keyword">private</span> LayoutInflater mInflater;</div><div class="line">    <span class="keyword">private</span> Map&lt;Integer,Boolean&gt; checkBoxState = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ListViewAdapter</span><span class="params">(Context context, List&lt;String&gt; cities)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.cities = cities;</div><div class="line">        mInflater = LayoutInflater.from(context);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> cities.size();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getItem</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> cities.get(position);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getItemId</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> position;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">getView</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> position, View convertView, ViewGroup parent)</span> </span>&#123;</div><div class="line">        ViewHolder holder = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>)&#123;</div><div class="line">            holder = <span class="keyword">new</span> ViewHolder();</div><div class="line">            convertView = mInflater.inflate(R.layout.listview_item,parent,<span class="keyword">false</span>);</div><div class="line">            holder.cbListView = (CheckBox) convertView.findViewById(R.id.cb_listView);</div><div class="line">            holder.tvListView = (TextView) convertView.findViewById(R.id.tv_listView);</div><div class="line">            convertView.setTag(holder);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            holder = (ViewHolder) convertView.getTag();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        holder.tvListView.setText(cities.get(position));</div><div class="line"></div><div class="line">        holder.cbListView.setOnCheckedChangeListener(<span class="keyword">new</span> CompoundButton.OnCheckedChangeListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCheckedChanged</span><span class="params">(CompoundButton buttonView, <span class="keyword">boolean</span> isChecked)</span> </span>&#123;</div><div class="line">                <span class="keyword">if</span> (isChecked)&#123;</div><div class="line">                    <span class="comment">// 若CheckBox为选中状态，保存当前位置的选中信息</span></div><div class="line">                    checkBoxState.put(position,<span class="keyword">true</span>);</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    <span class="comment">// 若CheckBox取消选中，则将其从HashMap中移除</span></div><div class="line">                    checkBoxState.remove(position);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (checkBoxState.size() != <span class="number">0</span> &amp;&amp; checkBoxState.containsKey(position))&#123;</div><div class="line">            holder.cbListView.setChecked(<span class="keyword">true</span>);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            holder.cbListView.setChecked(<span class="keyword">false</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> convertView;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span></span>&#123;</div><div class="line">        CheckBox cbListView;</div><div class="line">        TextView tvListView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListViewAdapter</span> <span class="keyword">extends</span> <span class="title">BaseAdapter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; cities;</span><br><span class="line">    <span class="keyword">private</span> LayoutInflater mInflater;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;Integer,Boolean&gt; checkBoxState = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ListViewAdapter</span><span class="params">(Context context, List&lt;String&gt; cities)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.cities = cities;</span><br><span class="line">        mInflater = LayoutInflater.from(context);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> cities.size();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getItem</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> cities.get(position);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getItemId</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> position;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">getView</span><span class="params">(<span class="keyword">final</span> <span class="keyword">int</span> position, View convertView, ViewGroup parent)</span> </span>&#123;</span><br><span class="line">        ViewHolder holder = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>)&#123;</span><br><span class="line">            holder = <span class="keyword">new</span> ViewHolder();</span><br><span class="line">            convertView = mInflater.inflate(R.layout.listview_item,parent,<span class="keyword">false</span>);</span><br><span class="line">            holder.cbListView = (CheckBox) convertView.findViewById(R.id.cb_listView);</span><br><span class="line">            holder.tvListView = (TextView) convertView.findViewById(R.id.tv_listView);</span><br><span class="line">            convertView.setTag(holder);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            holder = (ViewHolder) convertView.getTag();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        holder.tvListView.setText(cities.get(position));</span><br><span class="line"></span><br><span class="line">        holder.cbListView.setOnCheckedChangeListener(<span class="keyword">new</span> CompoundButton.OnCheckedChangeListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCheckedChanged</span><span class="params">(CompoundButton buttonView, <span class="keyword">boolean</span> isChecked)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (isChecked)&#123;</span><br><span class="line">                    <span class="comment">// 若CheckBox为选中状态，保存当前位置的选中信息</span></span><br><span class="line">                    checkBoxState.put(position,<span class="keyword">true</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 若CheckBox取消选中，则将其从HashMap中移除</span></span><br><span class="line">                    checkBoxState.remove(position);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (checkBoxState.size() != <span class="number">0</span> &amp;&amp; checkBoxState.containsKey(position))&#123;</span><br><span class="line">            holder.cbListView.setChecked(<span class="keyword">true</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            holder.cbListView.setChecked(<span class="keyword">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> convertView;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span></span>&#123;</span><br><span class="line">        CheckBox cbListView;</span><br><span class="line">        TextView tvListView;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>处理之后就不会出现滑动错乱了</p>
-<p><img src="https://ww3.sinaimg.cn/large/006tKfTcly1fdrglr46lkg309o0hkk3d.gif" alt=""></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcly1fdrglr46lkg309o0hkk3d.gif" alt></p>
 <p>以上就是解决这个问题的两种方式，此方法同样也适用于RecyclerView。</p>
 <p>其实在这里还会有另一个隐藏的问题，那就是如果ListView中包含CheckBox跟Button等，则ListView默认会失去焦点，这个时候设置了<code>setOnItemClickListener()</code>即item的点击监听是不起作用的，点击ListView的item是不响应的，解决这个问题的办法就是在item的根布局中设置descendantFocusability属性，比如</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"horizontal"</span></div><div class="line">    <span class="attr">android:gravity</span>=<span class="string">"center"</span></div><div class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"10dp"</span></div><div class="line">    <span class="attr">android:paddingStart</span>=<span class="string">"10dp"</span></div><div class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"10dp"</span></div><div class="line">    <span class="attr">android:paddingEnd</span>=<span class="string">"10dp"</span></div><div class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"10dp"</span></div><div class="line">    <span class="attr">android:descendantFocusability</span>=<span class="string">"blocksDescendants"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">CheckBox</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/cb_listView"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/tv_listView"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:textSize</span>=<span class="string">"30sp"</span></div><div class="line">        <span class="attr">android:layout_marginLeft</span>=<span class="string">"5dp"</span></div><div class="line">        <span class="attr">android:layout_marginStart</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:orientation</span>=<span class="string">"horizontal"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:gravity</span>=<span class="string">"center"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:paddingLeft</span>=<span class="string">"10dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:paddingStart</span>=<span class="string">"10dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:paddingRight</span>=<span class="string">"10dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:paddingEnd</span>=<span class="string">"10dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:paddingTop</span>=<span class="string">"10dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:descendantFocusability</span>=<span class="string">"blocksDescendants"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">CheckBox</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">"@+id/cb_listView"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">"@+id/tv_listView"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">"30sp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_marginLeft</span>=<span class="string">"5dp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_marginStart</span>=<span class="string">"5dp"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>该属性是当一个为view获取焦点时，定义viewGroup和其子控件两者之间的关系。</p>
 <p>属性的值有三种：</p>
 <ul>
@@ -457,13 +451,13 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wx.png" alt="张永明 WeChat Pay"/>
+          <img id="wechat_qr" src="/images/wx.png" alt="张永明 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/zfb.jpg" alt="张永明 Alipay"/>
+          <img id="alipay_qr" src="/images/zfb.jpg" alt="张永明 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -569,9 +563,7 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/logo.jpg"
-               alt="张永明" />
+          <img class="site-author-image" itemprop="image" src="/images/logo.jpg" alt="张永明">
           <p class="site-author-name" itemprop="name">张永明</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -663,7 +655,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

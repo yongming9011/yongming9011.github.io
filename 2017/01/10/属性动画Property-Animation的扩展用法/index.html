@@ -6,15 +6,15 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -66,46 +66,39 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="ViewPropertyAnimator,Interpolator,属性动画,propertyValuesHolder,TypeEvaluator," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="ViewPropertyAnimator,Interpolator,属性动画,propertyValuesHolder,TypeEvaluator,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.jpg?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.jpg?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="Interpolator的使用Interpolator字面意思就是插入器（有道翻译），在动画中，它的主要作用是改变动画的执行速率，比如匀速，加速等一系列效果。Interpolator可以自定义实现，以下是Android系统已经为我们写好了的一些插入器：
-
-AccelerateDecelerateInterpolator   —— 在动画开始与结束的地方速率改变比较慢，在中间的时候加速
-Accele">
+<meta name="description" content="Interpolator的使用Interpolator字面意思就是插入器（有道翻译），在动画中，它的主要作用是改变动画的执行速率，比如匀速，加速等一系列效果。Interpolator可以自定义实现，以下是Android系统已经为我们写好了的一些插入器：  AccelerateDecelerateInterpolator   —— 在动画开始与结束的地方速率改变比较慢，在中间的时候加速 Accele">
+<meta name="keywords" content="ViewPropertyAnimator,Interpolator,属性动画,propertyValuesHolder,TypeEvaluator">
 <meta property="og:type" content="article">
 <meta property="og:title" content="属性动画Property Animation的扩展用法">
 <meta property="og:url" content="https://yongming9011.github.io/2017/01/10/属性动画Property-Animation的扩展用法/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
-<meta property="og:description" content="Interpolator的使用Interpolator字面意思就是插入器（有道翻译），在动画中，它的主要作用是改变动画的执行速率，比如匀速，加速等一系列效果。Interpolator可以自定义实现，以下是Android系统已经为我们写好了的一些插入器：
-
-AccelerateDecelerateInterpolator   —— 在动画开始与结束的地方速率改变比较慢，在中间的时候加速
-Accele">
+<meta property="og:description" content="Interpolator的使用Interpolator字面意思就是插入器（有道翻译），在动画中，它的主要作用是改变动画的执行速率，比如匀速，加速等一系列效果。Interpolator可以自定义实现，以下是Android系统已经为我们写好了的一些插入器：  AccelerateDecelerateInterpolator   —— 在动画开始与结束的地方速率改变比较慢，在中间的时候加速 Accele">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-02-08T06:12:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="属性动画Property Animation的扩展用法">
-<meta name="twitter:description" content="Interpolator的使用Interpolator字面意思就是插入器（有道翻译），在动画中，它的主要作用是改变动画的执行速率，比如匀速，加速等一系列效果。Interpolator可以自定义实现，以下是Android系统已经为我们写好了的一些插入器：
-
-AccelerateDecelerateInterpolator   —— 在动画开始与结束的地方速率改变比较慢，在中间的时候加速
-Accele">
+<meta name="twitter:description" content="Interpolator的使用Interpolator字面意思就是插入器（有道翻译），在动画中，它的主要作用是改变动画的执行速率，比如匀速，加速等一系列效果。Interpolator可以自定义实现，以下是Android系统已经为我们写好了的一些插入器：  AccelerateDecelerateInterpolator   —— 在动画开始与结束的地方速率改变比较慢，在中间的时候加速 Accele">
 
 
 
@@ -133,7 +126,7 @@ Accele">
 
 
 
-  <link rel="canonical" href="https://yongming9011.github.io/2017/01/10/属性动画Property-Animation的扩展用法/"/>
+  <link rel="canonical" href="https://yongming9011.github.io/2017/01/10/属性动画Property-Animation的扩展用法/">
 
 
 
@@ -173,7 +166,7 @@ Accele">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">从百草园到三味书屋</span>
         <span class="logo-line-after"><i></i></span>
@@ -203,7 +196,7 @@ Accele">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -213,7 +206,7 @@ Accele">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -223,7 +216,7 @@ Accele">
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -233,7 +226,7 @@ Accele">
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -243,7 +236,7 @@ Accele">
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -256,7 +249,7 @@ Accele">
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -277,9 +270,7 @@ Accele">
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -316,7 +307,7 @@ Accele">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张永明">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/logo.jpg">
     </span>
 
@@ -359,7 +350,7 @@ Accele">
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -392,7 +383,7 @@ Accele">
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -424,24 +415,24 @@ Accele">
 <li>OvershootInterpolator    ——————-  向前甩一定值后再回到原来位置</li>
 </ul>
 <p>具体的使用比较简单，在Java代码中调用动画对象的<code>setInterpolator()</code>方法传入Interpolator对象：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(mImageView, <span class="string">"translationY"</span>, mImageView.getTranslationY(), <span class="number">400</span>);  </div><div class="line"><span class="comment">// 设置动画时长  </span></div><div class="line">objectAnimator.setDuration(<span class="number">5000</span>);  </div><div class="line"><span class="comment">// 设置弹起效果  </span></div><div class="line">objectAnimator.setInterpolator(<span class="keyword">new</span> BounceInterpolator());  </div><div class="line">objectAnimator.start();</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(mImageView, <span class="string">"translationY"</span>, mImageView.getTranslationY(), <span class="number">400</span>);  </span><br><span class="line"><span class="comment">// 设置动画时长  </span></span><br><span class="line">objectAnimator.setDuration(<span class="number">5000</span>);  </span><br><span class="line"><span class="comment">// 设置弹起效果  </span></span><br><span class="line">objectAnimator.setInterpolator(<span class="keyword">new</span> BounceInterpolator());  </span><br><span class="line">objectAnimator.start();</span><br></pre></td></tr></table></figure>
 <p>在xml中使用android:interpolator 属性：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;  </div><div class="line"><span class="comment">&lt;!-- 将alpha的值从1过渡到0，时长1秒 --&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">objectAnimator</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>  </span></div><div class="line">    <span class="attr">android:valueFrom</span>=<span class="string">"1"</span>  </div><div class="line">    <span class="attr">android:valueTo</span>=<span class="string">"0"</span>  </div><div class="line">    <span class="attr">android:valueType</span>=<span class="string">"floatType"</span>  </div><div class="line">    <span class="attr">android:duration</span>=<span class="string">"1000"</span>  </div><div class="line">    <span class="attr">android:propertyName</span>=<span class="string">"alpha"</span>  </div><div class="line">    <span class="attr">android:interpolator</span>=<span class="string">"@android:anim/linear_interpolator"</span>/&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;  </span><br><span class="line"><span class="comment">&lt;!-- 将alpha的值从1过渡到0，时长1秒 --&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">objectAnimator</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>  </span></span><br><span class="line"><span class="tag">    <span class="attr">android:valueFrom</span>=<span class="string">"1"</span>  </span></span><br><span class="line"><span class="tag">    <span class="attr">android:valueTo</span>=<span class="string">"0"</span>  </span></span><br><span class="line"><span class="tag">    <span class="attr">android:valueType</span>=<span class="string">"floatType"</span>  </span></span><br><span class="line"><span class="tag">    <span class="attr">android:duration</span>=<span class="string">"1000"</span>  </span></span><br><span class="line"><span class="tag">    <span class="attr">android:propertyName</span>=<span class="string">"alpha"</span>  </span></span><br><span class="line"><span class="tag">    <span class="attr">android:interpolator</span>=<span class="string">"@android:anim/linear_interpolator"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="TypeEvaluator的用法"><a href="#TypeEvaluator的用法" class="headerlink" title="TypeEvaluator的用法"></a>TypeEvaluator的用法</h3><p>TypeEvaluator翻译为类型估值算法，又称估值器，它的作用是通过起始值、结束值以及插值器返回值来计算在该时间点的属性值应该是多少，也就是控制动画实际运动轨迹，系统给我们提供<code>IntEvaluator</code>（针对整型属性）、<code>FloatEvaluator</code>（针对浮点型属性）以及<code>ArgbEvaluator</code>（针对Color属性），如果想根据某个属性TYPE来实现动画，但是这个Type又不是Android系统内置的，这个时候就需要创建一个自己的evaluator来实现了，并且新创建的type必须实现接口<code>TypeEvaluator</code>。Android系统内置的type有int,float和color，他们对应的evaluator是IntEvaluator、FloatEvaluator和ArgbEvaluator。接口TypeEvaluator内只有一个方法，用来计算要实现动画属性的值。以下是TypeEvaluator接口：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/** </span></div><div class="line"> * Interface for use with the &#123;<span class="doctag">@link</span> ValueAnimator#setEvaluator(TypeEvaluator)&#125; function. Evaluators </div><div class="line"> * allow developers to create animations on arbitrary property types, by allowing them to supply </div><div class="line"> * custom evaluators for types that are not automatically understood and used by the animation </div><div class="line"> * system. </div><div class="line"> * </div><div class="line"> * <span class="doctag">@see</span> ValueAnimator#setEvaluator(TypeEvaluator) </div><div class="line"> */  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TypeEvaluator</span>&lt;<span class="title">T</span>&gt; </span>&#123;  </div><div class="line">  </div><div class="line">    <span class="comment">/** </span></div><div class="line">     * This function returns the result of linearly interpolating the start and end values, with </div><div class="line">     * &lt;code&gt;fraction&lt;/code&gt; representing the proportion between the start and end values. The </div><div class="line">     * calculation is a simple parametric calculation: &lt;code&gt;result = x0 + t * (x1 - x0)&lt;/code&gt;, </div><div class="line">     * where &lt;code&gt;x0&lt;/code&gt; is &lt;code&gt;startValue&lt;/code&gt;, &lt;code&gt;x1&lt;/code&gt; is &lt;code&gt;endValue&lt;/code&gt;, </div><div class="line">     * and &lt;code&gt;t&lt;/code&gt; is &lt;code&gt;fraction&lt;/code&gt;. </div><div class="line">     * </div><div class="line">     * <span class="doctag">@param</span> fraction   The fraction from the starting to the ending values </div><div class="line">     * <span class="doctag">@param</span> startValue The start value. </div><div class="line">     * <span class="doctag">@param</span> endValue   The end value. </div><div class="line">     * <span class="doctag">@return</span> A linear interpolation between the start and end values, given the </div><div class="line">     *         &lt;code&gt;fraction&lt;/code&gt; parameter. </div><div class="line">     */  </div><div class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">evaluate</span><span class="params">(<span class="keyword">float</span> fraction, T startValue, T endValue)</span></span>;  </div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * Interface for use with the &#123;<span class="doctag">@link</span> ValueAnimator#setEvaluator(TypeEvaluator)&#125; function. Evaluators </span></span><br><span class="line"><span class="comment"> * allow developers to create animations on arbitrary property types, by allowing them to supply </span></span><br><span class="line"><span class="comment"> * custom evaluators for types that are not automatically understood and used by the animation </span></span><br><span class="line"><span class="comment"> * system. </span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@see</span> ValueAnimator#setEvaluator(TypeEvaluator) </span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TypeEvaluator</span>&lt;<span class="title">T</span>&gt; </span>&#123;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">/** </span></span><br><span class="line"><span class="comment">     * This function returns the result of linearly interpolating the start and end values, with </span></span><br><span class="line"><span class="comment">     * &lt;code&gt;fraction&lt;/code&gt; representing the proportion between the start and end values. The </span></span><br><span class="line"><span class="comment">     * calculation is a simple parametric calculation: &lt;code&gt;result = x0 + t * (x1 - x0)&lt;/code&gt;, </span></span><br><span class="line"><span class="comment">     * where &lt;code&gt;x0&lt;/code&gt; is &lt;code&gt;startValue&lt;/code&gt;, &lt;code&gt;x1&lt;/code&gt; is &lt;code&gt;endValue&lt;/code&gt;, </span></span><br><span class="line"><span class="comment">     * and &lt;code&gt;t&lt;/code&gt; is &lt;code&gt;fraction&lt;/code&gt;. </span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> fraction   The fraction from the starting to the ending values </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> startValue The start value. </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> endValue   The end value. </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> A linear interpolation between the start and end values, given the </span></span><br><span class="line"><span class="comment">     *         &lt;code&gt;fraction&lt;/code&gt; parameter. </span></span><br><span class="line"><span class="comment">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">evaluate</span><span class="params">(<span class="keyword">float</span> fraction, T startValue, T endValue)</span></span>;  </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>接口只有一个方法evaluate()返回了一个泛型，方法的第一个参数是估值小数，也就是插值器计算出来的当前属性改变的百分比，第二个参数是动画开始值，第三个参数是动画的结束值。</p>
 <p>我们看看IntEvaluator的实现：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** </span></div><div class="line"> * This evaluator can be used to perform type interpolation between &lt;code&gt;int&lt;/code&gt; values. </div><div class="line"> */  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IntEvaluator</span> <span class="keyword">implements</span> <span class="title">TypeEvaluator</span>&lt;<span class="title">Integer</span>&gt; </span>&#123;  </div><div class="line">  </div><div class="line">    <span class="comment">/** </span></div><div class="line">     * This function returns the result of linearly interpolating the start and end values, with </div><div class="line">     * &lt;code&gt;fraction&lt;/code&gt; representing the proportion between the start and end values. The </div><div class="line">     * calculation is a simple parametric calculation: &lt;code&gt;result = x0 + t * (v1 - v0)&lt;/code&gt;, </div><div class="line">     * where &lt;code&gt;x0&lt;/code&gt; is &lt;code&gt;startValue&lt;/code&gt;, &lt;code&gt;x1&lt;/code&gt; is &lt;code&gt;endValue&lt;/code&gt;, </div><div class="line">     * and &lt;code&gt;t&lt;/code&gt; is &lt;code&gt;fraction&lt;/code&gt;. </div><div class="line">     * </div><div class="line">     * <span class="doctag">@param</span> fraction   The fraction from the starting to the ending values </div><div class="line">     * <span class="doctag">@param</span> startValue The start value; should be of type &lt;code&gt;int&lt;/code&gt; or </div><div class="line">     *                   &lt;code&gt;Integer&lt;/code&gt; </div><div class="line">     * <span class="doctag">@param</span> endValue   The end value; should be of type &lt;code&gt;int&lt;/code&gt; or &lt;code&gt;Integer&lt;/code&gt; </div><div class="line">     * <span class="doctag">@return</span> A linear interpolation between the start and end values, given the </div><div class="line">     *         &lt;code&gt;fraction&lt;/code&gt; parameter. </div><div class="line">     */  </div><div class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">evaluate</span><span class="params">(<span class="keyword">float</span> fraction, Integer startValue, Integer endValue)</span> </span>&#123;  </div><div class="line">        <span class="keyword">int</span> startInt = startValue;  </div><div class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)(startInt + fraction * (endValue - startInt));  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * This evaluator can be used to perform type interpolation between &lt;code&gt;int&lt;/code&gt; values. </span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IntEvaluator</span> <span class="keyword">implements</span> <span class="title">TypeEvaluator</span>&lt;<span class="title">Integer</span>&gt; </span>&#123;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">/** </span></span><br><span class="line"><span class="comment">     * This function returns the result of linearly interpolating the start and end values, with </span></span><br><span class="line"><span class="comment">     * &lt;code&gt;fraction&lt;/code&gt; representing the proportion between the start and end values. The </span></span><br><span class="line"><span class="comment">     * calculation is a simple parametric calculation: &lt;code&gt;result = x0 + t * (v1 - v0)&lt;/code&gt;, </span></span><br><span class="line"><span class="comment">     * where &lt;code&gt;x0&lt;/code&gt; is &lt;code&gt;startValue&lt;/code&gt;, &lt;code&gt;x1&lt;/code&gt; is &lt;code&gt;endValue&lt;/code&gt;, </span></span><br><span class="line"><span class="comment">     * and &lt;code&gt;t&lt;/code&gt; is &lt;code&gt;fraction&lt;/code&gt;. </span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> fraction   The fraction from the starting to the ending values </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> startValue The start value; should be of type &lt;code&gt;int&lt;/code&gt; or </span></span><br><span class="line"><span class="comment">     *                   &lt;code&gt;Integer&lt;/code&gt; </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> endValue   The end value; should be of type &lt;code&gt;int&lt;/code&gt; or &lt;code&gt;Integer&lt;/code&gt; </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> A linear interpolation between the start and end values, given the </span></span><br><span class="line"><span class="comment">     *         &lt;code&gt;fraction&lt;/code&gt; parameter. </span></span><br><span class="line"><span class="comment">     */</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">evaluate</span><span class="params">(<span class="keyword">float</span> fraction, Integer startValue, Integer endValue)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">int</span> startInt = startValue;  </span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)(startInt + fraction * (endValue - startInt));  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>很明显，其在<code>evaluate()</code>方法中进行了数值的转换，并返回了结果，所以我们只需照着做就行。</p>
 <p>比如，我现在需要让一个图片实现抛物线运动，则可以借助自定义的TypeEvaluator实现，首先定义一个坐标类Point，里面包含x轴跟y轴，以及对应的setter,getter</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** </span></div><div class="line"> * 坐标点，用于控制动画的位置 </div><div class="line"> * Created by zhangyongming on 2017/1/11. </div><div class="line"> */  </div><div class="line">  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> x;  </div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> y;  </div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span><span class="params">(<span class="keyword">float</span> x, <span class="keyword">float</span> y)</span> </span>&#123;  </div><div class="line">        <span class="keyword">this</span>.x = x;  </div><div class="line">        <span class="keyword">this</span>.y = y;  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">getX</span><span class="params">()</span> </span>&#123;  </div><div class="line">        <span class="keyword">return</span> x;  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setX</span><span class="params">(<span class="keyword">float</span> x)</span> </span>&#123;  </div><div class="line">        <span class="keyword">this</span>.x = x;  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">getY</span><span class="params">()</span> </span>&#123;  </div><div class="line">        <span class="keyword">return</span> y;  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setY</span><span class="params">(<span class="keyword">float</span> y)</span> </span>&#123;  </div><div class="line">        <span class="keyword">this</span>.y = y;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * 坐标点，用于控制动画的位置 </span></span><br><span class="line"><span class="comment"> * Created by zhangyongming on 2017/1/11. </span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> x;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> y;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span><span class="params">(<span class="keyword">float</span> x, <span class="keyword">float</span> y)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.x = x;  </span><br><span class="line">        <span class="keyword">this</span>.y = y;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">getX</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> x;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setX</span><span class="params">(<span class="keyword">float</span> x)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.x = x;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">getY</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> y;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setY</span><span class="params">(<span class="keyword">float</span> y)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.y = y;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后是自定义的PointEvaluator类，这里我们获取动画执行时的x轴跟y轴的坐标，并返回一个Point对象。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** </span></div><div class="line"> * Point的估值器 </div><div class="line"> * Created by zhangyongming on 2017/1/11. </div><div class="line"> */  </div><div class="line">  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PointEvaluator</span> <span class="keyword">implements</span> <span class="title">TypeEvaluator</span>&lt;<span class="title">Point</span>&gt; </span>&#123;  </div><div class="line">    <span class="meta">@Override</span>  </div><div class="line">    <span class="function"><span class="keyword">public</span> Point <span class="title">evaluate</span><span class="params">(<span class="keyword">float</span> fraction, Point startValue, Point endValue)</span> </span>&#123;  </div><div class="line">        <span class="keyword">float</span> resultX = startValue.getX() + (endValue.getX() - startValue.getX()) * fraction;  </div><div class="line">        <span class="keyword">float</span> resultY = startValue.getY() + (endValue.getY() - startValue.getY()) * fraction;  </div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Point(resultX,resultY);  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * Point的估值器 </span></span><br><span class="line"><span class="comment"> * Created by zhangyongming on 2017/1/11. </span></span><br><span class="line"><span class="comment"> */</span>  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PointEvaluator</span> <span class="keyword">implements</span> <span class="title">TypeEvaluator</span>&lt;<span class="title">Point</span>&gt; </span>&#123;  </span><br><span class="line">    <span class="meta">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Point <span class="title">evaluate</span><span class="params">(<span class="keyword">float</span> fraction, Point startValue, Point endValue)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">float</span> resultX = startValue.getX() + (endValue.getX() - startValue.getX()) * fraction;  </span><br><span class="line">        <span class="keyword">float</span> resultY = startValue.getY() + (endValue.getY() - startValue.getY()) * fraction;  </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Point(resultX,resultY);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>接下来就是给ImageView使用了：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">ValueAnimator valueAnimator = ValueAnimator.ofObject(<span class="keyword">new</span> PointEvaluator(), <span class="keyword">new</span> Point(<span class="number">50</span>, <span class="number">50</span>), <span class="keyword">new</span> Point(<span class="number">500</span>, <span class="number">500</span>));  </div><div class="line">valueAnimator.setDuration(<span class="number">2000</span>);  </div><div class="line">valueAnimator.start();  </div><div class="line">valueAnimator.addUpdateListener(<span class="keyword">new</span> ValueAnimator.AnimatorUpdateListener() &#123;  </div><div class="line">    <span class="meta">@Override</span>  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationUpdate</span><span class="params">(ValueAnimator valueAnimator)</span> </span>&#123;  </div><div class="line">        Point point = (Point) valueAnimator.getAnimatedValue();  </div><div class="line">        mImageView.setX(point.getX());  </div><div class="line">        mImageView.setY(point.getY());  </div><div class="line">    &#125;  </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ValueAnimator valueAnimator = ValueAnimator.ofObject(<span class="keyword">new</span> PointEvaluator(), <span class="keyword">new</span> Point(<span class="number">50</span>, <span class="number">50</span>), <span class="keyword">new</span> Point(<span class="number">500</span>, <span class="number">500</span>));  </span><br><span class="line">valueAnimator.setDuration(<span class="number">2000</span>);  </span><br><span class="line">valueAnimator.start();  </span><br><span class="line">valueAnimator.addUpdateListener(<span class="keyword">new</span> ValueAnimator.AnimatorUpdateListener() &#123;  </span><br><span class="line">    <span class="meta">@Override</span>  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationUpdate</span><span class="params">(ValueAnimator valueAnimator)</span> </span>&#123;  </span><br><span class="line">        Point point = (Point) valueAnimator.getAnimatedValue();  </span><br><span class="line">        mImageView.setX(point.getX());  </span><br><span class="line">        mImageView.setY(point.getY());  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>基本上的实现思路就是这样的。</p>
 <h3 id="PropertyValuesHolder的用法"><a href="#PropertyValuesHolder的用法" class="headerlink" title="PropertyValuesHolder的用法"></a>PropertyValuesHolder的用法</h3><p>propertyValuesHolder可以用于动画的组合执行，使用起来很简单，如下示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">PropertyValuesHolder alpha = PropertyValuesHolder.ofFloat(<span class="string">"alpha"</span>, <span class="number">1f</span>, <span class="number">0f</span>, <span class="number">1f</span>);  </div><div class="line">PropertyValuesHolder scaleX = PropertyValuesHolder.ofFloat(<span class="string">"scaleX"</span>, <span class="number">1f</span>, <span class="number">0f</span>, <span class="number">1f</span>);  </div><div class="line">PropertyValuesHolder scaleY = PropertyValuesHolder.ofFloat(<span class="string">"scaleY"</span>, <span class="number">1f</span>, <span class="number">0f</span>, <span class="number">1f</span>);  </div><div class="line">ObjectAnimator.ofPropertyValuesHolder(mImageView, alpha, scaleX, scaleY).setDuration(<span class="number">2000</span>).start();</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PropertyValuesHolder alpha = PropertyValuesHolder.ofFloat(<span class="string">"alpha"</span>, <span class="number">1f</span>, <span class="number">0f</span>, <span class="number">1f</span>);  </span><br><span class="line">PropertyValuesHolder scaleX = PropertyValuesHolder.ofFloat(<span class="string">"scaleX"</span>, <span class="number">1f</span>, <span class="number">0f</span>, <span class="number">1f</span>);  </span><br><span class="line">PropertyValuesHolder scaleY = PropertyValuesHolder.ofFloat(<span class="string">"scaleY"</span>, <span class="number">1f</span>, <span class="number">0f</span>, <span class="number">1f</span>);  </span><br><span class="line">ObjectAnimator.ofPropertyValuesHolder(mImageView, alpha, scaleX, scaleY).setDuration(<span class="number">2000</span>).start();</span><br></pre></td></tr></table></figure>
 <p>这样就能很容易地实现三个动画的组合播放了。</p>
 <h3 id="ViewPropertyAnimator的用法"><a href="#ViewPropertyAnimator的用法" class="headerlink" title="ViewPropertyAnimator的用法"></a>ViewPropertyAnimator的用法</h3><p>ViewPropertyAnimator可以用一种很简便的方式让控件执行动画，该类提供了链式调用进行多个属性同时变化的动画，更加简洁方便我们操作组合动画（多个属性同时进行变化），它可以为同时动画提供更好的性能。ViewPropertyAnimator在动画进行的时候只对多个属性的变化进行一次invalidate调用，而不是对变化每个属性进行调用（n个ObjectAnimator就会进行n次属性变化，就有n次invalidate）。当然这个类的调用方式更方便，调用对应属性方法传一个属性值就可以自动实现动画。每个属性方法都有两种调用形式，例如 alpha(float value) 和alphaBy(float value)，前者是变化到多少，后者是变化多少。</p>
 <p>ViewPropertyAnimator没用提供公开的构造方法，通过调用view的animate()获取引用。</p>
@@ -454,11 +445,11 @@ Accele">
 <li>ViewPropertyAnimator只能通过View的animate()获取引用进行设置。</li>
 </ul>
 <p>比如让一个图片控件在1秒内由透明变为不透明：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mImageView.animate().alpha(<span class="number">0f</span>).setDuration(<span class="number">1000</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mImageView.animate().alpha(<span class="number">0f</span>).setDuration(<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
 <p>是不是很方便？当然也可以使用插入器，同样只需要在后面继续调用<code>setInterpolator()</code>方法即可：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mImageView.animate().alpha(<span class="number">0f</span>).setDuration(<span class="number">1000</span>).setInterpolator(<span class="keyword">new</span> LinearInterpolator());</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mImageView.animate().alpha(<span class="number">0f</span>).setDuration(<span class="number">1000</span>).setInterpolator(<span class="keyword">new</span> LinearInterpolator());</span><br></pre></td></tr></table></figure>
 <p>只需要使用连缀的方式使用就行，大大简化了代码，如果需要实现组合动画也一样，同样使用连缀的方式:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mImageView.animate().alpha(<span class="number">0f</span>).rotation(<span class="number">360</span>).setDuration(<span class="number">1000</span>).setInterpolator(<span class="keyword">new</span> LinearInterpolator());</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mImageView.animate().alpha(<span class="number">0f</span>).rotation(<span class="number">360</span>).setDuration(<span class="number">1000</span>).setInterpolator(<span class="keyword">new</span> LinearInterpolator());</span><br></pre></td></tr></table></figure>
 <p>可以看出我们不需要调用<code>start()</code>方法，这是由于ViewPropertyAnimator在将我们所有的连缀的方法初始化之后会为我们调用<code>start()</code>方法，使动画执行。</p>
 
       
@@ -482,13 +473,13 @@ Accele">
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wx.png" alt="张永明 WeChat Pay"/>
+          <img id="wechat_qr" src="/images/wx.png" alt="张永明 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/zfb.jpg" alt="张永明 Alipay"/>
+          <img id="alipay_qr" src="/images/zfb.jpg" alt="张永明 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -596,7 +587,7 @@ Accele">
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -607,9 +598,7 @@ Accele">
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/logo.jpg"
-               alt="张永明" />
+          <img class="site-author-image" itemprop="image" src="/images/logo.jpg" alt="张永明">
           <p class="site-author-name" itemprop="name">张永明</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -717,7 +706,7 @@ Accele">
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>

@@ -6,15 +6,15 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -32,7 +32,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -66,43 +66,39 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="java,JavaScript,数组,遍历删除," />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
+  <meta name="keywords" content="java,JavaScript,数组,遍历删除,">
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.jpg?v=5.1.0" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.jpg?v=5.1.0">
 
 
 
 
 
 
-<meta name="description" content="有时候我们项目中会遇到这种需求：需要遍历一个数组或者list，然后将其中的某一个符合条件的一项或者多项删除。如果不注意，有时候还真会遇到点小麻烦。
-JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
-123456789var arr = [2,3,5,5,6,8,4,3,6];for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;	if (ar">
+<meta name="description" content="有时候我们项目中会遇到这种需求：需要遍历一个数组或者list，然后将其中的某一个符合条件的一项或者多项删除。如果不注意，有时候还真会遇到点小麻烦。 JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓ 123456789var arr = [2,3,5,5,6,8,4,3,6];for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;	if (ar">
+<meta name="keywords" content="java,JavaScript,数组,遍历删除">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java跟JavaScript遍历删除数组或list指定项">
 <meta property="og:url" content="https://yongming9011.github.io/2018/03/18/Java跟JavaScript遍历删除数组或list指定项/index.html">
 <meta property="og:site_name" content="从百草园到三味书屋">
-<meta property="og:description" content="有时候我们项目中会遇到这种需求：需要遍历一个数组或者list，然后将其中的某一个符合条件的一项或者多项删除。如果不注意，有时候还真会遇到点小麻烦。
-JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
-123456789var arr = [2,3,5,5,6,8,4,3,6];for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;	if (ar">
+<meta property="og:description" content="有时候我们项目中会遇到这种需求：需要遍历一个数组或者list，然后将其中的某一个符合条件的一项或者多项删除。如果不注意，有时候还真会遇到点小麻烦。 JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓ 123456789var arr = [2,3,5,5,6,8,4,3,6];for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;	if (ar">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-09-03T17:09:49.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java跟JavaScript遍历删除数组或list指定项">
-<meta name="twitter:description" content="有时候我们项目中会遇到这种需求：需要遍历一个数组或者list，然后将其中的某一个符合条件的一项或者多项删除。如果不注意，有时候还真会遇到点小麻烦。
-JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
-123456789var arr = [2,3,5,5,6,8,4,3,6];for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;	if (ar">
+<meta name="twitter:description" content="有时候我们项目中会遇到这种需求：需要遍历一个数组或者list，然后将其中的某一个符合条件的一项或者多项删除。如果不注意，有时候还真会遇到点小麻烦。 JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓ 123456789var arr = [2,3,5,5,6,8,4,3,6];for (var i = 0; i &amp;lt; arr.length; i++) &amp;#123;	if (ar">
 
 
 
@@ -130,7 +126,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
 
 
 
-  <link rel="canonical" href="https://yongming9011.github.io/2018/03/18/Java跟JavaScript遍历删除数组或list指定项/"/>
+  <link rel="canonical" href="https://yongming9011.github.io/2018/03/18/Java跟JavaScript遍历删除数组或list指定项/">
 
 
 
@@ -170,7 +166,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">从百草园到三味书屋</span>
         <span class="logo-line-after"><i></i></span>
@@ -200,7 +196,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -210,7 +206,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -220,7 +216,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -230,7 +226,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -240,7 +236,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -253,7 +249,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -274,9 +270,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -313,7 +307,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张永明">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/logo.jpg">
     </span>
 
@@ -356,7 +350,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -389,7 +383,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -410,22 +404,22 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
       
         <p>有时候我们项目中会遇到这种需求：需要遍历一个数组或者list，然后将其中的某一个符合条件的一项或者多项删除。如果不注意，有时候还真会遇到点小麻烦。</p>
 <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>如果按照正常的思维进行操作会怎么样呢？看下面↓</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">	<span class="keyword">if</span> (arr[i] == <span class="number">5</span>) &#123;</div><div class="line">		arr.splice(i,<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(arr);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span> (arr[i] == <span class="number">5</span>) &#123;</span><br><span class="line">		arr.splice(i,<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
 <p>运行结果：<code>[2, 3, 5, 6, 8, 4, 3, 6]</code></p>
 <p>很明显，只删除了一个5，出现这种情况的原因，是由于当<code>i = 2</code>的时候，删除了5，整个数组的长度发生了变化，所以下一次遍历<code>arr[3] = 6</code>,直接跳过了另一个5。</p>
 <p>其实有很多方法可以解决这个问题，我一般使用两种方法：</p>
 <ol>
 <li><p>倒着遍历：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = arr.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</div><div class="line">	<span class="keyword">if</span> (arr[i] == <span class="number">5</span>) &#123;</div><div class="line">		arr.splice(i,<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(arr);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = arr.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">	<span class="keyword">if</span> (arr[i] == <span class="number">5</span>) &#123;</span><br><span class="line">		arr.splice(i,<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
 <p>运行结果：<code>[ 2, 3, 6, 8, 4, 3, 6 ]</code>，完美解决！</p>
 </li>
 <li><p>遍历的时候，如果移除了某一项，循环值减1：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">	<span class="keyword">if</span> (arr[i] == <span class="number">5</span>) &#123;</div><div class="line">		arr.splice(i,<span class="number">1</span>);</div><div class="line">		i--;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(arr);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span> (arr[i] == <span class="number">5</span>) &#123;</span><br><span class="line">		arr.splice(i,<span class="number">1</span>);</span><br><span class="line">		i--;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
 <p>运行结果:<code>[ 2, 3, 6, 8, 4, 3, 6 ]</code>，一样可以解决问题。</p>
 </li>
 </ol>
 <h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><p>java中大多数时间操作的是集合，先看一段代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.List;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		List&lt;String&gt; arr = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">		arr.add(<span class="string">"2"</span>);</div><div class="line">		arr.add(<span class="string">"3"</span>);</div><div class="line">		arr.add(<span class="string">"5"</span>);</div><div class="line">		arr.add(<span class="string">"5"</span>);</div><div class="line">		arr.add(<span class="string">"6"</span>);</div><div class="line">		arr.add(<span class="string">"8"</span>);</div><div class="line">		arr.add(<span class="string">"4"</span>);</div><div class="line">		arr.add(<span class="string">"3"</span>);</div><div class="line">		arr.add(<span class="string">"6"</span>);</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (String s : arr) &#123;</div><div class="line">			<span class="keyword">if</span> (s.equals(<span class="string">"5"</span>)) &#123;</div><div class="line">				arr.remove(s);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		System.out.print(arr);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		List&lt;String&gt; arr = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		arr.add(<span class="string">"2"</span>);</span><br><span class="line">		arr.add(<span class="string">"3"</span>);</span><br><span class="line">		arr.add(<span class="string">"5"</span>);</span><br><span class="line">		arr.add(<span class="string">"5"</span>);</span><br><span class="line">		arr.add(<span class="string">"6"</span>);</span><br><span class="line">		arr.add(<span class="string">"8"</span>);</span><br><span class="line">		arr.add(<span class="string">"4"</span>);</span><br><span class="line">		arr.add(<span class="string">"3"</span>);</span><br><span class="line">		arr.add(<span class="string">"6"</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (String s : arr) &#123;</span><br><span class="line">			<span class="keyword">if</span> (s.equals(<span class="string">"5"</span>)) &#123;</span><br><span class="line">				arr.remove(s);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		System.out.print(arr);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>看起来没啥问题，那么运行一下</p>
 <blockquote>
 <p>Exception in thread “main” java.util.ConcurrentModificationException</p>
@@ -435,7 +429,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
 </blockquote>
 <p>经典的<code>ConcurrentModificationException</code>异常，其实看看源码就知道了，由于遍历的时候集合长度发生了变化，抛出了这个异常。</p>
 <p>解决办法就是用Iterator:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		List&lt;String&gt; arr = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">		arr.add(<span class="string">"2"</span>);</div><div class="line">		arr.add(<span class="string">"3"</span>);</div><div class="line">		arr.add(<span class="string">"5"</span>);</div><div class="line">		arr.add(<span class="string">"5"</span>);</div><div class="line">		arr.add(<span class="string">"6"</span>);</div><div class="line">		arr.add(<span class="string">"8"</span>);</div><div class="line">		arr.add(<span class="string">"4"</span>);</div><div class="line">		arr.add(<span class="string">"3"</span>);</div><div class="line">		arr.add(<span class="string">"6"</span>);</div><div class="line"></div><div class="line">		Iterator&lt;String&gt; it = arr.iterator();</div><div class="line">		<span class="keyword">while</span>(it.hasNext()) &#123;</div><div class="line">			<span class="keyword">if</span> (it.next().equals(<span class="string">"5"</span>)) &#123;</div><div class="line">				it.remove();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		System.out.print(arr);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		List&lt;String&gt; arr = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		arr.add(<span class="string">"2"</span>);</span><br><span class="line">		arr.add(<span class="string">"3"</span>);</span><br><span class="line">		arr.add(<span class="string">"5"</span>);</span><br><span class="line">		arr.add(<span class="string">"5"</span>);</span><br><span class="line">		arr.add(<span class="string">"6"</span>);</span><br><span class="line">		arr.add(<span class="string">"8"</span>);</span><br><span class="line">		arr.add(<span class="string">"4"</span>);</span><br><span class="line">		arr.add(<span class="string">"3"</span>);</span><br><span class="line">		arr.add(<span class="string">"6"</span>);</span><br><span class="line"></span><br><span class="line">		Iterator&lt;String&gt; it = arr.iterator();</span><br><span class="line">		<span class="keyword">while</span>(it.hasNext()) &#123;</span><br><span class="line">			<span class="keyword">if</span> (it.next().equals(<span class="string">"5"</span>)) &#123;</span><br><span class="line">				it.remove();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		System.out.print(arr);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行结果：<code>[2, 3, 6, 8, 4, 3, 6]</code>,OK,问题解决，各位晚安！</p>
 
       
@@ -459,13 +453,13 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wx.png" alt="张永明 WeChat Pay"/>
+          <img id="wechat_qr" src="/images/wx.png" alt="张永明 WeChat Pay">
           <p>微信打赏</p>
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/zfb.jpg" alt="张永明 Alipay"/>
+          <img id="alipay_qr" src="/images/zfb.jpg" alt="张永明 Alipay">
           <p>支付宝打赏</p>
         </div>
       
@@ -571,7 +565,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -582,9 +576,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/logo.jpg"
-               alt="张永明" />
+          <img class="site-author-image" itemprop="image" src="/images/logo.jpg" alt="张永明">
           <p class="site-author-name" itemprop="name">张永明</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
@@ -692,7 +684,7 @@ JavaScript如果按照正常的思维进行操作会怎么样呢？看下面↓
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>
